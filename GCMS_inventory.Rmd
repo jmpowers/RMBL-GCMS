@@ -33,9 +33,11 @@ nrow(sequ); nrow(qgdfiles); nrow(sequ.file) #TODO some duplicates created in the
 plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles$CreationTime - minutes(cd_offset)), 80), y = 1))
 points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.02), col="blue")
 
-tibble(create_desorb = as.numeric(diff(sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time))), units="mins")) %>% 
+tibble(alltimes = sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time)),
+       year = year(alltimes),
+       create_desorb = c(0,as.numeric(diff(alltimes), units="mins"))) %>% 
   mutate(n=row_number()) %>% 
-  ggplot(aes(x=n, y=create_desorb)) + geom_point(size=0.2) +
+  ggplot(aes(x=n, y=create_desorb, color=factor(year))) + geom_point(size=0.2) +
   geom_hline(yintercept=c(0, cd_offset), color="blue") +
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
   scale_y_continuous(limits = c(0,60), n.breaks=30)

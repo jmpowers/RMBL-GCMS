@@ -84,11 +84,13 @@ users <- read_tsv("data/GCMS_users.tsv")
 # Merge sequence and files ------------------------------------------------
 
 # fuzzy join the two lists by Markes desorb start time and GC-MS file creation time with a certain offset and tolerance
-#these settings (+18 min +- 15 min) are optimized for picking out 2022 samples
-#but time difference shift each year
-#up to 2021 the settings were offset: +0 min tolerance: +- 16 min
-cd_offset <- 18 # files created at least this many minutes after desorb start time 
-cd_tolerance <- 15 # fuzziness before or after (min)
+#time difference shift each year, these are the optimum settings:
+#up to 2021: +0 min +- 16 min
+#2022: +18 min +- 15 min
+#2023: +0 min +- 16 min
+
+cd_offset <- 0 # files created at least this many minutes after desorb start time 
+cd_tolerance <- 16 # fuzziness before or after (min)
 
 sequ.file <- difference_full_join(sequ, qgdfiles %>% mutate(CreationTime = CreationTime - minutes(cd_offset)),
                                   by=c("Desorb.Start.Time"="CreationTime"), max_dist = cd_tolerance*60, distance_col="create_desorb") %>% 
