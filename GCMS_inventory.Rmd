@@ -1,0 +1,69 @@
+---
+title: "RMBL GCMS Data Inventory"
+author: "[John Powers](http://sites.uci.edu/powers/)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    self_contained: no
+    lib_dir: libs
+    code_folding: hide
+    toc: yes
+    toc_float: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(knitr)
+knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
+                      fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+#source("markes_sequence.R") #generates the following rda file
+filedate <- "230908" #update to YYMMDD date the file was copied off
+load(paste0("output/markes_sequence", filedate,".rda"))
+```
+
+
+```{r fuzzyjoin}
+sequ.file %>% count(fuzzy_n, year(eithertime)) %>% 
+  kable(caption = "large count is result=NA from no Markes match, eithertime=NA are skips")
+#sequ.file %>% filter(fuzzy_n > 1, fuzzy_n < 100) %>% View()
+nrow(sequ); nrow(qgdfiles); nrow(sequ.file) #TODO some duplicates created in the merge
+
+plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles$CreationTime - minutes(cd_offset)), 80), y = 1))
+points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.02), col="blue")
+
+tibble(create_desorb = as.numeric(diff(sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time))), units="mins")) %>% 
+  mutate(n=row_number()) %>% 
+  ggplot(aes(x=n, y=create_desorb)) + geom_point(size=0.2) +
+  geom_hline(yintercept=c(0, cd_offset), color="blue") +
+  geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
+  scale_y_continuous(limits = c(0,60), n.breaks=30)
+
+sequ.file %>% drop_na(create_desorb) %>% 
+  mutate(n=row_number(), create_desorb=as.numeric(create_desorb, units="mins")) %>% 
+  ggplot(aes(shape=factor(year(eithertime)), x=n, y=create_desorb, color=fct_lump_n(Folder,10))) +
+  geom_point() + labs(y="GC-MS file creation - Markes desorb start time (min)", shape="Year", color="Folder")+
+  geom_hline(yintercept=c(0,16), color="blue")
+
+sequ.file %>% filter(CreationDate> as.POSIXct("2019-06-19")) %>% 
+  select(CreationTime, Desorb.Start.Time) %>% 
+  map_dfr(~ as.numeric(diff(.), units="mins")) %>% mutate(n = row_number()) %>% 
+  pivot_longer(contains("Time")) %>% 
+  ggplot(aes(x=n, y=value, color=name, shape=name)) + 
+  geom_point() +  ylim(c(0,90))+ theme_minimal()+ labs(y="Time between samples (min)")
+
+sequ.file %>% arrange(eithertime) %>% mutate(n=row_number()) %>%
+  ggplot(aes(x=n, y=markes_GC, color=factor(year(eithertime)))) + geom_point() +
+  labs(y="Markes batch index - GC batch index")
+```
+
+```{r calendar}
+sequ.file %>% drop_na(eithertime) %>% 
+  ggplot(aes(x=SequenceDate, fill=fct_lump_n(Folder,10))) + 
+  geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales="free_x") + labs(fill="Folder")
+
+sequ.file  %>% drop_na(eithertime) %>% filter(status !="Desorbed NA") %>% 
+  ggplot(aes(x=SequenceDate, fill=status)) + 
+  geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales="free_x")
+```

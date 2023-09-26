@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="John Powers" />
+
+<meta name="date" content="2023-09-26" />
+
+<title>RMBL GCMS Data Inventory</title>
+
+<script src="libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">RMBL GCMS Data Inventory</h1>
+<h4 class="author"><a href="http://sites.uci.edu/powers/">John
+Powers</a></h4>
+<h4 class="date">2023-09-26</h4>
+
+</div>
+
+
+<pre class="r"><code>library(tidyverse)
+library(knitr)
+knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
+                      fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+#source(&quot;markes_sequence.R&quot;) #generates the following rda file
+filedate &lt;- &quot;230908&quot; #update to YYMMDD date the file was copied off
+load(paste0(&quot;output/markes_sequence&quot;, filedate,&quot;.rda&quot;))</code></pre>
+<pre class="r"><code>sequ.file %&gt;% count(fuzzy_n, year(eithertime)) %&gt;% 
+  kable(caption = &quot;large count is result=NA from no Markes match, eithertime=NA are skips&quot;)</code></pre>
+<table>
+<caption>large count is result=NA from no Markes match, eithertime=NA
+are skips</caption>
+<thead>
+<tr class="header">
+<th align="right">fuzzy_n</th>
+<th align="right">year(eithertime)</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">2017</td>
+<td align="right">584</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">2018</td>
+<td align="right">1022</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">2019</td>
+<td align="right">1826</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">2021</td>
+<td align="right">1171</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">2022</td>
+<td align="right">1771</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">2023</td>
+<td align="right">2149</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">NA</td>
+<td align="right">309</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">2017</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">2018</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">2019</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">2022</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">2017</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">2017</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">2017</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="right">1672</td>
+<td align="right">2017</td>
+<td align="right">667</td>
+</tr>
+<tr class="even">
+<td align="right">1672</td>
+<td align="right">2018</td>
+<td align="right">131</td>
+</tr>
+<tr class="odd">
+<td align="right">1672</td>
+<td align="right">2019</td>
+<td align="right">228</td>
+</tr>
+<tr class="even">
+<td align="right">1672</td>
+<td align="right">2021</td>
+<td align="right">32</td>
+</tr>
+<tr class="odd">
+<td align="right">1672</td>
+<td align="right">2022</td>
+<td align="right">47</td>
+</tr>
+<tr class="even">
+<td align="right">1672</td>
+<td align="right">2023</td>
+<td align="right">567</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>#sequ.file %&gt;% filter(fuzzy_n &gt; 1, fuzzy_n &lt; 100) %&gt;% View()
+nrow(sequ); nrow(qgdfiles); nrow(sequ.file) #TODO some duplicates created in the merge</code></pre>
+<pre><code>[1] 8844</code></pre>
+<pre><code>[1] 8043</code></pre>
+<pre><code>[1] 10536</code></pre>
+<pre class="r"><code>plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles$CreationTime - minutes(cd_offset)), 80), y = 1))
+points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.02), col=&quot;blue&quot;)</code></pre>
+<p><img src="images/fuzzyjoin-1.svg" width="768" /></p>
+<pre class="r"><code>tibble(create_desorb = as.numeric(diff(sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time))), units=&quot;mins&quot;)) %&gt;% 
+  mutate(n=row_number()) %&gt;% 
+  ggplot(aes(x=n, y=create_desorb)) + geom_point(size=0.2) +
+  geom_hline(yintercept=c(0, cd_offset), color=&quot;blue&quot;) +
+  geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color=&quot;red&quot;) +
+  scale_y_continuous(limits = c(0,60), n.breaks=30)</code></pre>
+<p><img src="images/fuzzyjoin-2.svg" width="768" /></p>
+<pre class="r"><code>sequ.file %&gt;% drop_na(create_desorb) %&gt;% 
+  mutate(n=row_number(), create_desorb=as.numeric(create_desorb, units=&quot;mins&quot;)) %&gt;% 
+  ggplot(aes(shape=factor(year(eithertime)), x=n, y=create_desorb, color=fct_lump_n(Folder,10))) +
+  geom_point() + labs(y=&quot;GC-MS file creation - Markes desorb start time (min)&quot;, shape=&quot;Year&quot;, color=&quot;Folder&quot;)+
+  geom_hline(yintercept=c(0,16), color=&quot;blue&quot;)</code></pre>
+<p><img src="images/fuzzyjoin-3.svg" width="768" /></p>
+<pre class="r"><code>sequ.file %&gt;% filter(CreationDate&gt; as.POSIXct(&quot;2019-06-19&quot;)) %&gt;% 
+  select(CreationTime, Desorb.Start.Time) %&gt;% 
+  map_dfr(~ as.numeric(diff(.), units=&quot;mins&quot;)) %&gt;% mutate(n = row_number()) %&gt;% 
+  pivot_longer(contains(&quot;Time&quot;)) %&gt;% 
+  ggplot(aes(x=n, y=value, color=name, shape=name)) + 
+  geom_point() +  ylim(c(0,90))+ theme_minimal()+ labs(y=&quot;Time between samples (min)&quot;)</code></pre>
+<p><img src="images/fuzzyjoin-4.svg" width="768" /></p>
+<pre class="r"><code>sequ.file %&gt;% arrange(eithertime) %&gt;% mutate(n=row_number()) %&gt;%
+  ggplot(aes(x=n, y=markes_GC, color=factor(year(eithertime)))) + geom_point() +
+  labs(y=&quot;Markes batch index - GC batch index&quot;)</code></pre>
+<p><img src="images/fuzzyjoin-5.svg" width="768" /></p>
+<pre class="r"><code>sequ.file %&gt;% drop_na(eithertime) %&gt;% 
+  ggplot(aes(x=SequenceDate, fill=fct_lump_n(Folder,10))) + 
+  geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales=&quot;free_x&quot;) + labs(fill=&quot;Folder&quot;)</code></pre>
+<p><img src="images/calendar-1.svg" width="768" /></p>
+<pre class="r"><code>sequ.file  %&gt;% drop_na(eithertime) %&gt;% filter(status !=&quot;Desorbed NA&quot;) %&gt;% 
+  ggplot(aes(x=SequenceDate, fill=status)) + 
+  geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales=&quot;free_x&quot;)</code></pre>
+<p><img src="images/calendar-2.svg" width="768" /></p>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
