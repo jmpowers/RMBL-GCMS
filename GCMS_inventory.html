@@ -281,17 +281,17 @@ are skips</caption>
 <tr class="odd">
 <td align="right">1</td>
 <td align="right">2017</td>
-<td align="right">584</td>
+<td align="right">582</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
 <td align="right">2018</td>
-<td align="right">1022</td>
+<td align="right">1023</td>
 </tr>
 <tr class="odd">
 <td align="right">1</td>
 <td align="right">2019</td>
-<td align="right">1826</td>
+<td align="right">1824</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
@@ -301,12 +301,12 @@ are skips</caption>
 <tr class="odd">
 <td align="right">1</td>
 <td align="right">2022</td>
-<td align="right">1771</td>
+<td align="right">1258</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
 <td align="right">2023</td>
-<td align="right">2149</td>
+<td align="right">2148</td>
 </tr>
 <tr class="odd">
 <td align="right">1</td>
@@ -316,67 +316,67 @@ are skips</caption>
 <tr class="even">
 <td align="right">2</td>
 <td align="right">2017</td>
-<td align="right">6</td>
+<td align="right">14</td>
 </tr>
 <tr class="odd">
 <td align="right">2</td>
 <td align="right">2018</td>
-<td align="right">4</td>
+<td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
 <td align="right">2019</td>
-<td align="right">4</td>
+<td align="right">6</td>
 </tr>
 <tr class="odd">
 <td align="right">2</td>
 <td align="right">2022</td>
+<td align="right">1028</td>
+</tr>
+<tr class="even">
 <td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="right">2017</td>
-<td align="right">6</td>
-</tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="right">2017</td>
-<td align="right">4</td>
-</tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="right">2017</td>
-<td align="right">6</td>
-</tr>
-<tr class="odd">
-<td align="right">1672</td>
-<td align="right">2017</td>
-<td align="right">667</td>
-</tr>
-<tr class="even">
-<td align="right">1672</td>
-<td align="right">2018</td>
-<td align="right">131</td>
-</tr>
-<tr class="odd">
-<td align="right">1672</td>
-<td align="right">2019</td>
-<td align="right">228</td>
-</tr>
-<tr class="even">
-<td align="right">1672</td>
-<td align="right">2021</td>
-<td align="right">32</td>
-</tr>
-<tr class="odd">
-<td align="right">1672</td>
-<td align="right">2022</td>
-<td align="right">47</td>
-</tr>
-<tr class="even">
-<td align="right">1672</td>
 <td align="right">2023</td>
-<td align="right">567</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">2017</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="right">2019</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td align="right">658</td>
+<td align="right">2017</td>
+<td align="right">259</td>
+</tr>
+<tr class="even">
+<td align="right">658</td>
+<td align="right">2018</td>
+<td align="right">42</td>
+</tr>
+<tr class="odd">
+<td align="right">658</td>
+<td align="right">2019</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="right">658</td>
+<td align="right">2021</td>
+<td align="right">18</td>
+</tr>
+<tr class="odd">
+<td align="right">658</td>
+<td align="right">2022</td>
+<td align="right">84</td>
+</tr>
+<tr class="even">
+<td align="right">658</td>
+<td align="right">2023</td>
+<td align="right">237</td>
 </tr>
 </tbody>
 </table>
@@ -384,13 +384,15 @@ are skips</caption>
 nrow(sequ); nrow(qgdfiles); nrow(sequ.file) #TODO some duplicates created in the merge</code></pre>
 <pre><code>[1] 8844</code></pre>
 <pre><code>[1] 8043</code></pre>
-<pre><code>[1] 10536</code></pre>
+<pre><code>[1] 10051</code></pre>
 <pre class="r"><code>plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles$CreationTime - minutes(cd_offset)), 80), y = 1))
 points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.02), col=&quot;blue&quot;)</code></pre>
 <p><img src="images/fuzzyjoin-1.svg" width="768" /></p>
-<pre class="r"><code>tibble(create_desorb = as.numeric(diff(sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time))), units=&quot;mins&quot;)) %&gt;% 
+<pre class="r"><code>tibble(alltimes = sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time)),
+       year = year(alltimes),
+       create_desorb = c(0,as.numeric(diff(alltimes), units=&quot;mins&quot;))) %&gt;% 
   mutate(n=row_number()) %&gt;% 
-  ggplot(aes(x=n, y=create_desorb)) + geom_point(size=0.2) +
+  ggplot(aes(x=n, y=create_desorb, color=factor(year))) + geom_point(size=0.2) +
   geom_hline(yintercept=c(0, cd_offset), color=&quot;blue&quot;) +
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color=&quot;red&quot;) +
   scale_y_continuous(limits = c(0,60), n.breaks=30)</code></pre>
