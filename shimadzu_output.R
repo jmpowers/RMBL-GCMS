@@ -26,8 +26,8 @@ thisyear <- 2023
 load(paste0("data/shimadzu_data_",thisyear,".rda"))
 
 shimadzu.files <- shimadzu.data %>% rename(FileName=Filename) %>% group_by(FileName,batch) %>% tally(name="n_peaks")
-shimadzu.files$FileName[duplicated(shimadzu.files$FileName)]
-#TODO figure out these duplicates
+#shimadzu.files %>% filter(FileName %in% FileName[duplicated(FileName)])
+#duplicate: distinct Blank1_8152023_01.qgd from different batches
 
 #k-means to detect which files are really blanks
 commonvols <- shimadzu.data %>% count(Name) %>% filter(n>500, Name != "") %>% pull(Name) %>% as.character()
@@ -45,7 +45,7 @@ all.km <- tibble(FileName=rownames(all.cut)) %>%
          nameBlank = Type=="blank",
          runYear = str_extract(FileName, paste0(2018:thisyear, collapse="|")) %>% replace_na("2018") %>% factor(),
          Cluster = km$cluster) %>% # Figure out which k-means clusters are the blanks
-  mutate(kBlank = Cluster %in% (count(., nameBlank, Cluster) %>% filter(nameBlank, n>4) %>% pull(Cluster)),
+  mutate(kBlank = Cluster %in% (count(., nameBlank, Cluster) %>% filter(nameBlank, n>3) %>% pull(Cluster)),
          Mixup = nameBlank != kBlank)
 
 #check kmeans performance
@@ -100,3 +100,6 @@ batchtables <- list.files("data/qgb", pattern = ".qgb", full.names=T) %>%
   arrange(mtime, seq_n) %>% 
   write_csv(paste(paste0("output/qgb_batches", filedate, ".csv")), quote="all")
 unlink("data/qgb", recursive = T)#delete unzip folder
+#check duplicates - so many, do not recommend joining
+#batchtables %>% count(qgbfile, file_lines) %>% filter(n>1) %>% View()
+#batchtables %>% count(batch, file_lines) %>% filter(n>1) %>% View()
