@@ -52,7 +52,7 @@ all.km <- tibble(FileName=rownames(all.cut)) %>%
 with(all.km, table(kBlank, nameBlank))
 all.km %>% count(Cluster, nameBlank) %>% pivot_wider(names_from=nameBlank, values_from=n) %>% arrange(desc(`TRUE`))
 
-load(paste0("output/markes_sequence",filedate,".rda"))
+load(paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
 allgc <- sequ.file %>% 
   arrange(sequence.start, markes_n, eithertime) %>%
   mutate(desorb.Start.diff = c(NA, diff(Desorb.Start.Time))) %>% 
@@ -64,7 +64,7 @@ allgc <- sequ.file %>%
   select(c("index", "sequence.start", "batch", "Desorb.Start.Time", "CreationTime", "eithertime", "status", 
            "Tube", "markes_n", "GC_n", "either_n", "markes_GC", "create_desorb", "desorb.Start.diff", 
            "Mixup", "nameBlank", "kBlank", "Cluster", "n_peaks", "verdict", "FileName", "sample", "user", "FullName", "id","fuzzy_n")) %>%
-  write_csv(paste0("output/gc",filedate,".csv"))
+  write_csv(paste0("output/gc",filedate,"_",thisyear,".csv"))
 
 # Shimadzu batch tables ---------------------------------------------------
 #extract filenames out of Shimadzu binary format qgb batch files

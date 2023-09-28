@@ -20,7 +20,8 @@ knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F,
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 #source("markes_sequence.R") #generates the following rda file
 filedate <- "230908" #update to YYMMDD date the file was copied off
-load(paste0("output/markes_sequence", filedate,".rda"))
+thisyear <- 2023
+load(paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
 ```
 
 
@@ -28,25 +29,47 @@ load(paste0("output/markes_sequence", filedate,".rda"))
 sequ.file %>% count(fuzzy_n, year(eithertime)) %>% 
   kable(caption = "large count is result=NA from no Markes match, eithertime=NA are skips")
 #sequ.file %>% filter(fuzzy_n > 1, fuzzy_n < 100) %>% View()
-nrow(sequ); nrow(qgdfiles); nrow(sequ.file) #TODO some duplicates created in the merge
+nrow(sequ.yr); nrow(qgdfiles.yr); nrow(sequ.file) #TODO some duplicates created in the merge
 
-plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles$CreationTime - minutes(cd_offset)), 80), y = 1))
-points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.02), col="blue")
+plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles.yr$CreationTime - minutes(cd_offset)), 80), y = 1))
+points(y~ x, data=data.frame(x = tail(sort(sequ.yr$Desorb.Start.Time), 80), y = 1.02), col="blue")
 
-tibble(alltimes = sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time)),
-       year = year(alltimes),
-       create_desorb = c(0,as.numeric(diff(alltimes), units="mins"))) %>% 
-  mutate(n=row_number()) %>% 
-  ggplot(aes(x=n, y=create_desorb, color=factor(year))) + geom_point(size=0.2) +
+tibble(alltimes = c(qgdfiles.yr$CreationTime, sequ.yr$Desorb.Start.Time),
+       type = c(rep("qgdfiles",nrow(qgdfiles.yr)), rep("sequ",nrow(sequ.yr))),
+       year = year(alltimes)) %>% 
+  arrange(alltimes) %>% 
+  mutate(timediff = c(0,as.numeric(diff(alltimes), units="mins")), n=row_number())  %>% 
+  filter(year==2023) %>% 
+  ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=0.2) +
   geom_hline(yintercept=c(0, cd_offset), color="blue") +
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
-  scale_y_continuous(limits = c(0,60), n.breaks=30)
+  scale_y_continuous(limits = c(NA,60), n.breaks=30) + geom_rug(size=0.1)
+
+#check that these two dfs have all the qgd files between them
+setdiff(c(na.exclude(sequ.merged$FileName), qgdfiles.nomatch$FileName), qgdfiles.yr$FileName)
+
+#check if any further matches are possible
+#these desorptions have no file  - could be cleaning runs, or not matched correctly
+nofile <- sequ.merged %>% filter(is.na(FileName)) %>% pull(Desorb.Start.Time) %>% sort()
+#times of the files without matches
+nodesorb <- sort(qgdfiles.nomatch$CreationTime)
+tibble(alltimes = c(nofile, nodesorb),
+       type = c(rep("sequ",length(nofile)), rep("qgd",length(nodesorb)))) %>% 
+  arrange(alltimes) %>% 
+  mutate(timediff = c(0,as.numeric(diff(alltimes), units="mins")), n=row_number())  %>% 
+  ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=1) +
+  geom_hline(yintercept=c(0, cd_offset), color="blue") +
+  geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
+ scale_y_continuous(limits = c(0,100), n.breaks=30) + geom_rug(size=0.1)
 
 sequ.file %>% drop_na(create_desorb) %>% 
-  mutate(n=row_number(), create_desorb=as.numeric(create_desorb, units="mins")) %>% 
+  mutate(n=row_number(), create_desorb_wrong=as.numeric(create_desorb, units="mins"),#before putting the offset back
+         create_desorb = as.numeric(CreationTime - Desorb.Start.Time, units="mins")) %>% #after putting the offset back
   ggplot(aes(shape=factor(year(eithertime)), x=n, y=create_desorb, color=fct_lump_n(Folder,10))) +
   geom_point() + labs(y="GC-MS file creation - Markes desorb start time (min)", shape="Year", color="Folder")+
-  geom_hline(yintercept=c(0,16), color="blue")
+  geom_hline(yintercept=c(0, cd_offset), color="blue") +
+  geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
+  scale_y_continuous(n.breaks=30) + theme(legend.position = "top") + geom_rug(size=0.1)
 
 sequ.file %>% filter(CreationDate> as.POSIXct("2019-06-19")) %>% 
   select(CreationTime, Desorb.Start.Time) %>% 
@@ -65,7 +88,7 @@ sequ.file %>% drop_na(eithertime) %>%
   ggplot(aes(x=SequenceDate, fill=fct_lump_n(Folder,10))) + 
   geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales="free_x") + labs(fill="Folder")
 
-sequ.file  %>% drop_na(eithertime) %>% filter(status !="Desorbed NA") %>% 
+sequ.file  %>% drop_na(eithertime) %>% #filter(status !="Desorbed NA") %>% 
   ggplot(aes(x=SequenceDate, fill=status)) + 
   geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales="free_x")
 ```

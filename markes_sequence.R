@@ -9,6 +9,9 @@ library(tidyverse)
 #Purpose: match up the Markes sequence and the list of Shimadzu chromatogram files to infer skips
 #fuzzy joins based on the desorb file of the Markes traps and the creation time of the qgd files
 
+filedate <- "230908" #update to YYMMDD date the file was copied off
+thisyear <- 2023
+
 # Markes sequence ---------------------------------------------------------
 
 #Convert from Markes timestamp to UTC
@@ -41,7 +44,7 @@ xml2df <- function(sequences.xml) { #Markes XML structure: Sequence(Sample(Metho
 #rename with date and add .xml to file name
 #this contains a list of all traps ever run in Markes autosampler batches, in XML format
 #reading in and converting the large file is slow
-filedate <- "230908" #update to YYMMDD date the file was copied off
+
 sequ <- read_xml(paste0("data/Sequence", filedate, ".prj.xml")) %>% 
   xml_find_all("//Sequence") %>% 
   map_df(xml2df) %>% 
@@ -50,12 +53,16 @@ sequ <- read_xml(paste0("data/Sequence", filedate, ".prj.xml")) %>%
   type.convert(as.is=F) %>% 
   rename_with(make.names) %>%
   rename(Tube = X0.0.0.Markes.TD..SeqVar_Tube,
-         RecollectionType = X0.0.0.Markes.TD..SeqVar_RecollectionType) %>% 
+         RecollectionType = X0.0.0.Markes.TD..SeqVar_RecollectionType,
+         GCCycleTime = X0.0.0.Markes.TD..GCCycleTime) %>% 
   mutate(sequence.start = markestime(timestamp),
          across(c(Desorb.End.Time, Desorb.Start.Time, Trap.Fire.Time), as.POSIXct),
-         Desorb.Start.Time = fill_starttime(Desorb.Start.Time)) #fill in missing times with midpoint of surrounding times
+         Desorb.Start.Time = fill_starttime(Desorb.Start.Time),
+         sequ.index = row_number()) #fill in missing times with midpoint of surrounding times
 
 sequ$Desorb.Start.Time[3239:3240] <- sequ$Desorb.Start.Time[3238] + c(0.5,1)*60*60 #patch a couple NAs
+
+sequ.yr <- sequ %>% filter(year(sequence.start)==thisyear)
 
 # Chromatogram data files -------------------------------------------------------------------
 
@@ -76,8 +83,15 @@ qgdfiles <-  read_csv(paste0("data/dir",filedate,".csv")) %>%
          Folder = str_remove(dirname(FullName),"C:/GCMSsolution/Data/Project1/"),
          create_last = LastWriteTime - CreationTime, #length of time the chromatogram was written to
          taildigits = strsplit(FileName, split="_") %>% map_chr(tail, 1),
-         GC_n = ifelse(nchar(taildigits) == 6, as.integer(substr(taildigits,1,3)), NA)) %>% #position in the GC run is recorded in the filename
+         GC_n = ifelse(nchar(taildigits) == 6, as.integer(substr(taildigits,1,3)), NA), #position in the GC run is recorded in the filename
+         dir.index = row_number()) %>% 
   filter(ext=="qgd") #only want Shimadzu chromatograms
+
+qgdfiles.yr <- qgdfiles %>% filter(year(CreationTime)==thisyear) %>% 
+  filter(!str_detect(FullName, "VMartin RMBL Data 2023")) #Val copied these files
+#check for duplicates
+#qgdfiles.yr %>% filter(FileName %in% FileName[duplicated(FileName)]) %>% View()
+#two blanks in 2023 with same name
 
 users <- read_tsv("data/GCMS_users.tsv")
 
@@ -87,17 +101,25 @@ users <- read_tsv("data/GCMS_users.tsv")
 #time difference shift each year, these are the optimum settings:
 #up to 2021: +0 min +- 16 min
 #2022: +18 min +- 15 min
-#2023: +0 min +- 16 min
+#TODO put these parameters in a text file and run for the other years
 
-cd_offset <- 0 # files created at least this many minutes after desorb start time 
-cd_tolerance <- 16 # fuzziness before or after (min)
+#range for 2023: -7 min to 21 min 
+cd_offset <- 7 # files created at least this many minutes after desorb start time 
+cd_tolerance <- 14 # fuzziness before or after (min)
 
-sequ.file <- difference_full_join(sequ, qgdfiles %>% mutate(CreationTime = CreationTime - minutes(cd_offset)),
-                                  by=c("Desorb.Start.Time"="CreationTime"), max_dist = cd_tolerance*60, distance_col="create_desorb") %>% 
-  add_count(result, name="fuzzy_n") %>%  #result uniquely identifies each row in sequ, so this counts the created duplicates
-  #slice_min(create_desorb) %>% # drop all but the best time match
+#first add files that match desorb times
+sequ.merged <- difference_left_join(sequ.yr, qgdfiles.yr %>% mutate(CreationTime = CreationTime - minutes(cd_offset)),
+                     by=c("Desorb.Start.Time" = "CreationTime"), 
+                     max_dist = cd_tolerance * 60, distance_col = "create_desorb") %>% 
+  add_count(result, name="fuzzy_n")# %>%  #result uniquely identifies each row in sequ, so this counts the created duplicates
+  #group_by(result) %>% slice_min(create_desorb) %>% ungroup()# drop all but the best time match
+
+#then collect the remaining files that have no matches - these are skips or should have a match
+qgdfiles.nomatch <- qgdfiles.yr %>% filter(!FileName %in% sequ.merged$FileName)
+  
+sequ.file <- bind_rows(sequ.merged, qgdfiles.nomatch) %>% 
   mutate(markes_GC = markes_n - GC_n, #difference between position in Markes and GC runs - should match unless a skip happened
-         CreationTime = CreationTime + minutes(cd_offset), #offset by this many minutes
+         CreationTime = CreationTime + minutes(cd_offset), #restore back to original time
          CreationDate = date(CreationTime),
          SequenceDate = date(sequence.start),
          eithertime = pmin(CreationTime, Desorb.Start.Time, na.rm=T), #miniumum of the two times, or just one if the other is missing
@@ -111,7 +133,7 @@ sequ.summary <- sequ.file %>%
            GC_n, either_n, markes_GC, create_desorb,  FileName, user, FullName, id, fuzzy_n)) %>% #columns needed for annotating verdicts
   arrange(sequence.start, markes_n, eithertime) %>%
   mutate(desorb.Start.diff = c(NA, diff(Desorb.Start.Time))) %>% #time differences between desorptions
-  write_csv(paste0("output/sequsummary",filedate,".csv"))
+  write_csv(paste0("output/sequsummary",filedate,"_",thisyear,".csv"))
 
-save(sequ, qgdfiles, sequ.file, cd_offset, cd_tolerance, 
-     file=paste0("output/markes_sequence",filedate,".rda"))
+save(sequ.yr, qgdfiles.yr, sequ.file, cd_offset, cd_tolerance,  
+     file=paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
