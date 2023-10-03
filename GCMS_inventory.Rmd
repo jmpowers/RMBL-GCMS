@@ -12,6 +12,10 @@ output:
 editor_options: 
   chunk_output_type: console
 ---
+<style type="text/css">
+.main-container { max-width: 1000px; margin-left: 0; margin-right: auto; }
+img{ max-width:200%; height: auto; }
+</style>
 
 ```{r setup, message=FALSE}
 library(tidyverse)
@@ -24,6 +28,9 @@ thisyear <- 2023
 load(paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
 ```
 
+Generated for `r thisyear` as of `r ymd(filedate)`
+
+# Fuzzy join diagnostics
 
 ```{r fuzzyjoin}
 sequ.file %>% count(fuzzy_n, year(eithertime)) %>% 
@@ -45,22 +52,22 @@ tibble(alltimes = c(qgdfiles.yr$CreationTime, sequ.yr$Desorb.Start.Time),
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
   scale_y_continuous(limits = c(NA,60), n.breaks=30) + geom_rug(size=0.1)
 
-#check that these two dfs have all the qgd files between them
-setdiff(c(na.exclude(sequ.merged$FileName), qgdfiles.nomatch$FileName), qgdfiles.yr$FileName)
-
-#check if any further matches are possible
-#these desorptions have no file  - could be cleaning runs, or not matched correctly
-nofile <- sequ.merged %>% filter(is.na(FileName)) %>% pull(Desorb.Start.Time) %>% sort()
-#times of the files without matches
-nodesorb <- sort(qgdfiles.nomatch$CreationTime)
-tibble(alltimes = c(nofile, nodesorb),
-       type = c(rep("sequ",length(nofile)), rep("qgd",length(nodesorb)))) %>% 
-  arrange(alltimes) %>% 
-  mutate(timediff = c(0,as.numeric(diff(alltimes), units="mins")), n=row_number())  %>% 
-  ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=1) +
-  geom_hline(yintercept=c(0, cd_offset), color="blue") +
-  geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
- scale_y_continuous(limits = c(0,100), n.breaks=30) + geom_rug(size=0.1)
+# #check that these two dfs have all the qgd files between them
+# setdiff(c(na.exclude(sequ.merged$FileName), qgdfiles.nomatch$FileName), qgdfiles.yr$FileName)
+# 
+# #check if any further matches are possible
+# #these desorptions have no file  - could be cleaning runs, or not matched correctly
+# nofile <- sequ.merged %>% filter(is.na(FileName)) %>% pull(Desorb.Start.Time) %>% sort()
+# #times of the files without matches
+# nodesorb <- sort(qgdfiles.nomatch$CreationTime)
+# tibble(alltimes = c(nofile, nodesorb),
+#        type = c(rep("sequ",length(nofile)), rep("qgd",length(nodesorb)))) %>% 
+#   arrange(alltimes) %>% 
+#   mutate(timediff = c(0,as.numeric(diff(alltimes), units="mins")), n=row_number())  %>% 
+#   ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=1) +
+#   geom_hline(yintercept=c(0, cd_offset), color="blue") +
+#   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
+#  scale_y_continuous(limits = c(0,100), n.breaks=30) + geom_rug(size=0.1)
 
 sequ.file %>% drop_na(create_desorb) %>% 
   mutate(n=row_number(), create_desorb_wrong=as.numeric(create_desorb, units="mins"),#before putting the offset back
@@ -83,7 +90,9 @@ sequ.file %>% arrange(eithertime) %>% mutate(n=row_number()) %>%
   labs(y="Markes batch index - GC batch index")
 ```
 
-```{r calendar}
+# Calendar
+
+```{r calendar, fig.width = 12}
 sequ.file %>% drop_na(eithertime) %>% 
   ggplot(aes(x=SequenceDate, fill=fct_lump_n(Folder,10))) + 
   geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales="free_x") + labs(fill="Folder")
@@ -92,3 +101,19 @@ sequ.file  %>% drop_na(eithertime) %>% #filter(status !="Desorbed NA") %>%
   ggplot(aes(x=SequenceDate, fill=status)) + 
   geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales="free_x")
 ```
+
+# Annotated with verdicts
+
+```{r annotated}
+tibble(filename = list.files("output/annotated/")) %>% 
+  mutate(data = map(filename, ~ read_csv(paste0("output/annotated/", .x), show_col_types = F)),
+         startdate = map_vec(data, ~date(min(ymd_hms(.x$sequence.start), na.rm=T))),
+         enddate =   map_vec(data, ~date(max(ymd_hms(.x$sequence.start), na.rm=T))),
+         cols = map_int(data, ncol),
+         rows = map_int(data, nrow),
+         batches = map_int(data, ~length(unique(.x$id))),
+         filename = str_remove(str_remove(filename, ".csv"), "RMBL GC-MS Data Inventory - ")) %>% 
+  select(-data) %>% arrange(desc(enddate)) %>% 
+  kable(caption = "Hand-annotated TD-GC-MS logs in output/annotated/")
+```
+

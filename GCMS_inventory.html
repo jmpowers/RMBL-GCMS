@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2023-09-26" />
+<meta name="date" content="2023-10-03" />
 
 <title>RMBL GCMS Data Inventory</title>
 
@@ -253,18 +253,26 @@ div.tocify {
 <h1 class="title toc-ignore">RMBL GCMS Data Inventory</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2023-09-26</h4>
+<h4 class="date">2023-10-03</h4>
 
 </div>
 
 
+<style type="text/css">
+.main-container { max-width: 1000px; margin-left: 0; margin-right: auto; }
+img{ max-width:200%; height: auto; }
+</style>
 <pre class="r"><code>library(tidyverse)
 library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 #source(&quot;markes_sequence.R&quot;) #generates the following rda file
 filedate &lt;- &quot;230908&quot; #update to YYMMDD date the file was copied off
-load(paste0(&quot;output/markes_sequence&quot;, filedate,&quot;.rda&quot;))</code></pre>
+thisyear &lt;- 2023
+load(paste0(&quot;output/markes_sequence&quot;,filedate,&quot;_&quot;,thisyear,&quot;.rda&quot;))</code></pre>
+<p>Generated for 2023 as of 2023-09-08</p>
+<div id="fuzzy-join-diagnostics" class="section level1">
+<h1>Fuzzy join diagnostics</h1>
 <pre class="r"><code>sequ.file %&gt;% count(fuzzy_n, year(eithertime)) %&gt;% 
   kable(caption = &quot;large count is result=NA from no Markes match, eithertime=NA are skips&quot;)</code></pre>
 <table>
@@ -280,128 +288,70 @@ are skips</caption>
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="right">2017</td>
-<td align="right">582</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">2018</td>
-<td align="right">1023</td>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">2019</td>
-<td align="right">1824</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">2021</td>
-<td align="right">1171</td>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">2022</td>
-<td align="right">1258</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
 <td align="right">2023</td>
-<td align="right">2148</td>
+<td align="right">2143</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">1</td>
 <td align="right">NA</td>
-<td align="right">309</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">2017</td>
-<td align="right">14</td>
+<td align="right">92</td>
 </tr>
 <tr class="odd">
-<td align="right">2</td>
-<td align="right">2018</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">2019</td>
-<td align="right">6</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="right">2022</td>
-<td align="right">1028</td>
-</tr>
-<tr class="even">
 <td align="right">2</td>
 <td align="right">2023</td>
-<td align="right">2</td>
-</tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="right">2017</td>
 <td align="right">12</td>
 </tr>
 <tr class="even">
-<td align="right">14</td>
-<td align="right">2019</td>
-<td align="right">14</td>
-</tr>
-<tr class="odd">
-<td align="right">658</td>
-<td align="right">2017</td>
-<td align="right">259</td>
-</tr>
-<tr class="even">
-<td align="right">658</td>
-<td align="right">2018</td>
-<td align="right">42</td>
-</tr>
-<tr class="odd">
-<td align="right">658</td>
-<td align="right">2019</td>
-<td align="right">18</td>
-</tr>
-<tr class="even">
-<td align="right">658</td>
-<td align="right">2021</td>
-<td align="right">18</td>
-</tr>
-<tr class="odd">
-<td align="right">658</td>
-<td align="right">2022</td>
-<td align="right">84</td>
-</tr>
-<tr class="even">
-<td align="right">658</td>
+<td align="right">NA</td>
 <td align="right">2023</td>
-<td align="right">237</td>
+<td align="right">32</td>
 </tr>
 </tbody>
 </table>
 <pre class="r"><code>#sequ.file %&gt;% filter(fuzzy_n &gt; 1, fuzzy_n &lt; 100) %&gt;% View()
-nrow(sequ); nrow(qgdfiles); nrow(sequ.file) #TODO some duplicates created in the merge</code></pre>
-<pre><code>[1] 8844</code></pre>
-<pre><code>[1] 8043</code></pre>
-<pre><code>[1] 10051</code></pre>
-<pre class="r"><code>plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles$CreationTime - minutes(cd_offset)), 80), y = 1))
-points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.02), col=&quot;blue&quot;)</code></pre>
+nrow(sequ.yr); nrow(qgdfiles.yr); nrow(sequ.file) #TODO some duplicates created in the merge</code></pre>
+<pre><code>[1] 2241</code></pre>
+<pre><code>[1] 1552</code></pre>
+<pre><code>[1] 2279</code></pre>
+<pre class="r"><code>plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles.yr$CreationTime - minutes(cd_offset)), 80), y = 1))
+points(y~ x, data=data.frame(x = tail(sort(sequ.yr$Desorb.Start.Time), 80), y = 1.02), col=&quot;blue&quot;)</code></pre>
 <p><img src="images/fuzzyjoin-1.svg" width="768" /></p>
-<pre class="r"><code>tibble(alltimes = sort(c(qgdfiles$CreationTime, sequ$Desorb.Start.Time)),
-       year = year(alltimes),
-       create_desorb = c(0,as.numeric(diff(alltimes), units=&quot;mins&quot;))) %&gt;% 
-  mutate(n=row_number()) %&gt;% 
-  ggplot(aes(x=n, y=create_desorb, color=factor(year))) + geom_point(size=0.2) +
+<pre class="r"><code>tibble(alltimes = c(qgdfiles.yr$CreationTime, sequ.yr$Desorb.Start.Time),
+       type = c(rep(&quot;qgdfiles&quot;,nrow(qgdfiles.yr)), rep(&quot;sequ&quot;,nrow(sequ.yr))),
+       year = year(alltimes)) %&gt;% 
+  arrange(alltimes) %&gt;% 
+  mutate(timediff = c(0,as.numeric(diff(alltimes), units=&quot;mins&quot;)), n=row_number())  %&gt;% 
+  filter(year==2023) %&gt;% 
+  ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=0.2) +
   geom_hline(yintercept=c(0, cd_offset), color=&quot;blue&quot;) +
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color=&quot;red&quot;) +
-  scale_y_continuous(limits = c(0,60), n.breaks=30)</code></pre>
+  scale_y_continuous(limits = c(NA,60), n.breaks=30) + geom_rug(size=0.1)</code></pre>
 <p><img src="images/fuzzyjoin-2.svg" width="768" /></p>
-<pre class="r"><code>sequ.file %&gt;% drop_na(create_desorb) %&gt;% 
-  mutate(n=row_number(), create_desorb=as.numeric(create_desorb, units=&quot;mins&quot;)) %&gt;% 
+<pre class="r"><code># #check that these two dfs have all the qgd files between them
+# setdiff(c(na.exclude(sequ.merged$FileName), qgdfiles.nomatch$FileName), qgdfiles.yr$FileName)
+# 
+# #check if any further matches are possible
+# #these desorptions have no file  - could be cleaning runs, or not matched correctly
+# nofile &lt;- sequ.merged %&gt;% filter(is.na(FileName)) %&gt;% pull(Desorb.Start.Time) %&gt;% sort()
+# #times of the files without matches
+# nodesorb &lt;- sort(qgdfiles.nomatch$CreationTime)
+# tibble(alltimes = c(nofile, nodesorb),
+#        type = c(rep(&quot;sequ&quot;,length(nofile)), rep(&quot;qgd&quot;,length(nodesorb)))) %&gt;% 
+#   arrange(alltimes) %&gt;% 
+#   mutate(timediff = c(0,as.numeric(diff(alltimes), units=&quot;mins&quot;)), n=row_number())  %&gt;% 
+#   ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=1) +
+#   geom_hline(yintercept=c(0, cd_offset), color=&quot;blue&quot;) +
+#   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color=&quot;red&quot;) +
+#  scale_y_continuous(limits = c(0,100), n.breaks=30) + geom_rug(size=0.1)
+
+sequ.file %&gt;% drop_na(create_desorb) %&gt;% 
+  mutate(n=row_number(), create_desorb_wrong=as.numeric(create_desorb, units=&quot;mins&quot;),#before putting the offset back
+         create_desorb = as.numeric(CreationTime - Desorb.Start.Time, units=&quot;mins&quot;)) %&gt;% #after putting the offset back
   ggplot(aes(shape=factor(year(eithertime)), x=n, y=create_desorb, color=fct_lump_n(Folder,10))) +
   geom_point() + labs(y=&quot;GC-MS file creation - Markes desorb start time (min)&quot;, shape=&quot;Year&quot;, color=&quot;Folder&quot;)+
-  geom_hline(yintercept=c(0,16), color=&quot;blue&quot;)</code></pre>
+  geom_hline(yintercept=c(0, cd_offset), color=&quot;blue&quot;) +
+  geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color=&quot;red&quot;) +
+  scale_y_continuous(n.breaks=30) + theme(legend.position = &quot;top&quot;) + geom_rug(size=0.1)</code></pre>
 <p><img src="images/fuzzyjoin-3.svg" width="768" /></p>
 <pre class="r"><code>sequ.file %&gt;% filter(CreationDate&gt; as.POSIXct(&quot;2019-06-19&quot;)) %&gt;% 
   select(CreationTime, Desorb.Start.Time) %&gt;% 
@@ -414,14 +364,86 @@ points(y~ x, data=data.frame(x = tail(sort(sequ$Desorb.Start.Time), 80), y = 1.0
   ggplot(aes(x=n, y=markes_GC, color=factor(year(eithertime)))) + geom_point() +
   labs(y=&quot;Markes batch index - GC batch index&quot;)</code></pre>
 <p><img src="images/fuzzyjoin-5.svg" width="768" /></p>
+</div>
+<div id="calendar" class="section level1">
+<h1>Calendar</h1>
 <pre class="r"><code>sequ.file %&gt;% drop_na(eithertime) %&gt;% 
   ggplot(aes(x=SequenceDate, fill=fct_lump_n(Folder,10))) + 
   geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales=&quot;free_x&quot;) + labs(fill=&quot;Folder&quot;)</code></pre>
-<p><img src="images/calendar-1.svg" width="768" /></p>
-<pre class="r"><code>sequ.file  %&gt;% drop_na(eithertime) %&gt;% filter(status !=&quot;Desorbed NA&quot;) %&gt;% 
+<p><img src="images/calendar-1.svg" width="1152" /></p>
+<pre class="r"><code>sequ.file  %&gt;% drop_na(eithertime) %&gt;% #filter(status !=&quot;Desorbed NA&quot;) %&gt;% 
   ggplot(aes(x=SequenceDate, fill=status)) + 
   geom_histogram(binwidth=1) + facet_wrap(vars(year(eithertime)), ncol=1, scales=&quot;free_x&quot;)</code></pre>
-<p><img src="images/calendar-2.svg" width="768" /></p>
+<p><img src="images/calendar-2.svg" width="1152" /></p>
+</div>
+<div id="annotated-with-verdicts" class="section level1">
+<h1>Annotated with verdicts</h1>
+<pre class="r"><code>tibble(filename = list.files(&quot;output/annotated/&quot;)) %&gt;% 
+  mutate(data = map(filename, ~ read_csv(paste0(&quot;output/annotated/&quot;, .x), show_col_types = F)),
+         startdate = map_vec(data, ~date(min(ymd_hms(.x$sequence.start), na.rm=T))),
+         enddate =   map_vec(data, ~date(max(ymd_hms(.x$sequence.start), na.rm=T))),
+         cols = map_int(data, ncol),
+         rows = map_int(data, nrow),
+         batches = map_int(data, ~length(unique(.x$id))),
+         filename = str_remove(str_remove(filename, &quot;.csv&quot;), &quot;RMBL GC-MS Data Inventory - &quot;)) %&gt;% 
+  select(-data) %&gt;% arrange(desc(enddate)) %&gt;% 
+  kable(caption = &quot;Hand-annotated TD-GC-MS logs in output/annotated/&quot;)</code></pre>
+<table>
+<caption>Hand-annotated TD-GC-MS logs in output/annotated/</caption>
+<thead>
+<tr class="header">
+<th align="left">filename</th>
+<th align="left">startdate</th>
+<th align="left">enddate</th>
+<th align="right">cols</th>
+<th align="right">rows</th>
+<th align="right">batches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">gc2023</td>
+<td align="left">2023-06-20</td>
+<td align="left">2023-09-07</td>
+<td align="right">26</td>
+<td align="right">2281</td>
+<td align="right">157</td>
+</tr>
+<tr class="even">
+<td align="left">2022gc220929</td>
+<td align="left">2022-06-23</td>
+<td align="left">2022-09-28</td>
+<td align="right">26</td>
+<td align="right">1903</td>
+<td align="right">142</td>
+</tr>
+<tr class="odd">
+<td align="left">maxfield_all210827annot</td>
+<td align="left">2018-07-16</td>
+<td align="left">2021-08-26</td>
+<td align="right">25</td>
+<td align="right">1568</td>
+<td align="right">73</td>
+</tr>
+<tr class="even">
+<td align="left">ipogc181921</td>
+<td align="left">2018-08-29</td>
+<td align="left">2021-08-21</td>
+<td align="right">26</td>
+<td align="right">1410</td>
+<td align="right">60</td>
+</tr>
+<tr class="odd">
+<td align="left">maxfield_all190807_0815</td>
+<td align="left">2018-07-16</td>
+<td align="left">2019-08-13</td>
+<td align="right">23</td>
+<td align="right">459</td>
+<td align="right">26</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
