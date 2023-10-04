@@ -1,0 +1,54 @@
+---
+title: "RMBL GCMS Standards"
+author: "[John Powers](http://sites.uci.edu/powers/)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    self_contained: no
+    lib_dir: libs
+    code_folding: hide
+    toc: yes
+    toc_float: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(reshape2)
+library(knitr)
+knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
+                      fig.path = "images-standards/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+```
+
+```{r load_standards}
+# source("read_shimadzu.R")
+# #grab all the files in the data folder - add new Shimadzu output here and give it 2 digit prefix number
+# setwd("~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/Standards/data")
+# stds.data <- list.files() %>% set_names() %>% map(read.shimadzu) %>% bind_rows(.id="batch") %>% 
+#   filter(!Filename %in% c("Blank_07192019.qgd"))
+# setwd("~/MyDocs/MEGA/UCI/RMBL 2020/RMBL-GCMS/")
+# save(stds.data, file = "data/standards_data.rda")
+
+load("data/standards_data.rda")
+
+mix <- deframe(read_csv("data/standards_names.csv")) #combine some compound names
+mergedmix <- unique(mix)
+
+stds <- stds.data %>% filter(Name %in% names(mix)) %>% 
+  mutate(Name = factor(recode(Name, !!!mix), levels=mergedmix)) %>% 
+  dcast(Filename~Name, sum, value.var="Area", drop=F) %>% 
+  write_csv("output/standards/standards_qual.csv")
+#Import standards_qual.csv into https://docs.google.com/spreadsheets/d/1BqdNz8hb_CGbX83Rg8Zr42TPwb4z_JN42Qf_Je4Sz4k/edit#gid=2145192042
+#Add metadata: type	notes	rundate	batch	conc	replicate	year
+#Then download the metadata tab to /data and read it back in:
+stds.meta <- read_csv("data/shimadzu_standards - metadata.csv") %>% select(-all_of(mergedmix)) %>% 
+  mutate(datebatch = factor(paste(rundate, batch)), 
+         year = factor(paste0(year(rundate), ifelse(year(rundate)==2018 & rundate < ymd("2018-07-12"), "leak",""), 
+                              ifelse(rundate==ymd("2021-07-23"),"fil2",""))))
+
+meta.mix <- left_join(stds.meta, stds) #joins the metadata and the peak areas
+stds <- meta.mix %>% select(Filename, all_of(mergedmix)) %>% #reorder stds to match stds.meta
+  column_to_rownames("Filename") 
+```
+
