@@ -19,6 +19,7 @@ library(reshape2)
 library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images-standards/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+options(knitr.kable.NA = "")
 ```
 
 ```{r load_standards}
@@ -50,5 +51,35 @@ stds.meta <- read_csv("data/shimadzu_standards - metadata.csv") %>% select(-all_
 meta.mix <- left_join(stds.meta, stds) #joins the metadata and the peak areas
 stds <- meta.mix %>% select(Filename, all_of(mergedmix)) %>% #reorder stds to match stds.meta
   column_to_rownames("Filename") 
+```
+
+# Inventory
+
+```{r inventory}
+stds.meta %>% count(year, type) %>% pivot_wider(names_from="type", values_from="n") %>% 
+  kable(caption="chromatograms in each year by type")
+stds.meta %>% count(year, batch) %>% 
+  kable(caption="chromatograms in each batch")
+```
+
+# Regressions
+
+Regressions are plotted in output/standards/regressions
+
+```{r plot_regressions}
+walk(mergedmix, function(chem) {
+  meta.mix %>% filter(str_detect(type,"Standards")) %>% #also consider Indole, PineneOctanone types
+  ggplot(aes(x=conc, group=datebatch, color=year, y=.data[[chem]])) +
+    scale_x_log10("Concentration (mg/mL)") + scale_y_log10("Area") + #ignores zeros
+    stat_smooth(method="lm", se=F, geom="line", alpha=0.6, size=1) + 
+    geom_point(pch=24, size=2) + 
+    scale_color_brewer("Year", palette="Set1", type="qual") + 
+    theme_minimal() + ggtitle(chem)
+  ggsave(filename=paste0("output/standards/regressions/regression_",chem,".svg"), width=8, height=6)
+})
+```
+
+```{r}
+
 ```
 
