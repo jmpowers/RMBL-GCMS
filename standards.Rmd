@@ -44,13 +44,31 @@ stds <- stds.data %>% filter(Name %in% names(mix)) %>%
 #Add metadata: type	notes	rundate	batch	conc	replicate	year
 #Then download the metadata tab to /data and read it back in:
 stds.meta <- read_csv("data/shimadzu_standards - metadata.csv") %>% select(-all_of(mergedmix)) %>% 
-  mutate(datebatch = factor(paste(rundate, batch)), 
-         year = factor(paste0(year(rundate), ifelse(year(rundate)==2018 & rundate < ymd("2018-07-12"), "leak",""), 
-                              ifelse(rundate==ymd("2021-07-23"),"fil2",""))))
+  mutate(datebatch = factor(paste(rundate, batch)),
+         yearbatch = factor(paste(year, batch)) %>% fct_reorder(rundate))
 
 meta.mix <- left_join(stds.meta, stds) #joins the metadata and the peak areas
 stds <- meta.mix %>% select(Filename, all_of(mergedmix)) %>% #reorder stds to match stds.meta
   column_to_rownames("Filename") 
+
+meta.mix.long <- meta.mix %>% 
+  pivot_longer(all_of(mergedmix), names_to="standard", values_to="area") %>% 
+  filter(type=="Standards" | 
+           (standard == "indole" & type == "Indole") | #indole only
+           (standard == "a-pinene" & type=="PineneOctanone"), #special mix with just these two
+         !(standard=="benzaldehyde" & year(rundate) > 2018),
+         !(standard=="a-farnesol" & year(rundate) > 2019),#stopped using these standards
+         !(standard=="a-farnesene" & year(rundate) < 2021),#started using this standard instead
+         !(standard == "methyl 2-hydroxybenzoate" & batch=="2021fresh"), #forgot to add standard
+         !(standard == "indole" & batch=="freshstds_noindole"), #did not add standard
+         is.na(exclude)) #manually drop particular files - see notes
+
+#TODO look at the rest of these exclusions
+# batches_sans_stds <- c("2018 leak", "newxfer_leak",  "Diane", "2019fresh","2018old", "Warmup")
+# batches_sans_indole <- c(batches_sans_stds, "freshstds_noindole")
+# datebatches_sans_stds <- c("2018-09-03 2018 no leak")
+# datebatches_sans_indole <- c(datebatches_sans_stds, "2019-06-21 2018fresh", "2017-06-30 2017 good")
+#TODO check excluded peak areas in "rmbl/Standards/metadata/regressions_2019_prexfer_filtered.csv"
 ```
 
 # Inventory
@@ -58,9 +76,25 @@ stds <- meta.mix %>% select(Filename, all_of(mergedmix)) %>% #reorder stds to ma
 ```{r inventory}
 stds.meta %>% count(year, type) %>% pivot_wider(names_from="type", values_from="n") %>% 
   kable(caption="chromatograms in each year by type")
-stds.meta %>% count(year, batch) %>% 
-  kable(caption="chromatograms in each batch")
+#3Standards and 4Standards are mixes with low peak areas, not sure which standards they contain
+
+stds.meta %>% filter(!type %in% c("Alkanes","Blank")) %>% count(year, batch, rundate) %>% 
+  kable(caption="chromatograms in each batch (excl. alkanes and blanks)") 
 ```
+
+# Peak areas
+
+```{r plot_areas}
+walk(mergedmix, function(chem) {
+  meta.mix.long %>% filter(standard==chem) %>% 
+    ggplot(aes(x=fct_rev(factor(paste(rundate, year, batch))), y=area, color=log10(conc)))  + 
+    geom_point(size=2) + geom_line(aes(group=conc)) + coord_flip()+
+    scale_y_log10() + scale_color_gradient(low="purple",high="orange") +
+    labs(title=chem, x="Batch", y="Area") + theme(axis.text.y = element_text(hjust=0)) 
+  ggsave(filename=paste0("output/standards/area/area_",chem,".svg"), width=8, height=6)
+})
+```
+
 
 # Regressions
 
@@ -68,18 +102,36 @@ Regressions are plotted in output/standards/regressions
 
 ```{r plot_regressions}
 walk(mergedmix, function(chem) {
-  meta.mix %>% filter(str_detect(type,"Standards")) %>% #also consider Indole, PineneOctanone types
-  ggplot(aes(x=conc, group=datebatch, color=year, y=.data[[chem]])) +
+  meta.mix.long %>% filter(standard==chem) %>% 
+    ggplot(aes(x=conc, group=datebatch, color=year, y=area)) +
     scale_x_log10("Concentration (mg/mL)") + scale_y_log10("Area") + #ignores zeros
-    stat_smooth(method="lm", se=F, geom="line", alpha=0.6, size=1) + 
+    stat_smooth(method="lm", formula = y~x, se=F, geom="line", alpha=1, size=1) + 
     geom_point(pch=24, size=2) + 
-    scale_color_brewer("Year", palette="Set1", type="qual") + 
+    scale_color_brewer("Year", palette="Set3", type="qual") + 
     theme_minimal() + ggtitle(chem)
   ggsave(filename=paste0("output/standards/regressions/regression_",chem,".svg"), width=8, height=6)
 })
 ```
 
-```{r}
+```{r run_regressions}
+slopes <- meta.mix.long %>% 
+  mutate(mass_ng = conc * 3 * 1000) %>% # concentration in ug/uL * 3 uL * 1000 ng/ug = mass of standard pipetted in ng
+  group_by(year, yearbatch, batch, type, standard) %>% nest() %>% 
+  mutate(model = map(data, ~ lm(area ~ mass_ng + 0, data=.x)), #force through zero (no intercept)
+         area_per_ng = map_dbl(model, coef),
+         ng_per_area = (1/map_dbl(model, coef)),
+         r2 = map_dbl(model, ~ summary(.x)$r.squared),
+         n = map_int(data, nrow)) %>% 
+  select(-data, -model) %>% 
+  write_csv("output/standards/regression_slopes.csv")
 
+# ggplot(slopes, aes(x= fct_rev(yearbatch), y = area_per_ng, color=r2)) + facet_wrap(vars(standard), scales="free_x") +
+#   geom_line(aes(group=standard), color="black") + geom_point(aes(size=n)) + coord_flip() + 
+#   theme(axis.text.y = element_text(hjust=0)) + labs(y="Area/ng", x="Batch") + theme_minimal()
+
+ggplot(slopes, aes(x= fct_rev(yearbatch), y = area_per_ng, color=standard)) + 
+  geom_line(aes(group=standard), color="black") + geom_point(aes(size=n)) + coord_flip() + 
+  theme(axis.text.y = element_text(hjust=0)) + labs(y="Area/ng", x="Batch") + theme_minimal()+
+  scale_color_brewer(palette = "Set1") + scale_y_sqrt()
 ```
 

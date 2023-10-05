@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="John Powers" />
+
+<meta name="date" content="2023-10-04" />
+
+<title>RMBL GCMS Standards</title>
+
+<script src="libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">RMBL GCMS Standards</h1>
+<h4 class="author"><a href="http://sites.uci.edu/powers/">John
+Powers</a></h4>
+<h4 class="date">2023-10-04</h4>
+
+</div>
+
+
+<pre class="r"><code>library(tidyverse)
+library(reshape2)
+library(knitr)
+knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
+                      fig.path = &quot;images-standards/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+options(knitr.kable.NA = &quot;&quot;)</code></pre>
+<pre class="r"><code># source(&quot;read_shimadzu.R&quot;)
+# #grab all the files in the data folder - add new Shimadzu output here and give it 2 digit prefix number
+# setwd(&quot;~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/Standards/data&quot;)
+# stds.data &lt;- list.files() %&gt;% set_names() %&gt;% map(read.shimadzu) %&gt;% bind_rows(.id=&quot;batch&quot;) %&gt;% 
+#   filter(!Filename %in% c(&quot;Blank_07192019.qgd&quot;))
+# setwd(&quot;~/MyDocs/MEGA/UCI/RMBL 2020/RMBL-GCMS/&quot;)
+# save(stds.data, file = &quot;data/standards_data.rda&quot;)
+
+load(&quot;data/standards_data.rda&quot;)
+
+mix &lt;- deframe(read_csv(&quot;data/standards_names.csv&quot;)) #combine some compound names
+mergedmix &lt;- unique(mix)
+
+stds &lt;- stds.data %&gt;% filter(Name %in% names(mix)) %&gt;% 
+  mutate(Name = factor(recode(Name, !!!mix), levels=mergedmix)) %&gt;% 
+  dcast(Filename~Name, sum, value.var=&quot;Area&quot;, drop=F) %&gt;% 
+  write_csv(&quot;output/standards/standards_qual.csv&quot;)
+#Import standards_qual.csv into https://docs.google.com/spreadsheets/d/1BqdNz8hb_CGbX83Rg8Zr42TPwb4z_JN42Qf_Je4Sz4k/edit#gid=2145192042
+#Add metadata: type notes   rundate batch   conc    replicate   year
+#Then download the metadata tab to /data and read it back in:
+stds.meta &lt;- read_csv(&quot;data/shimadzu_standards - metadata.csv&quot;) %&gt;% select(-all_of(mergedmix)) %&gt;% 
+  mutate(datebatch = factor(paste(rundate, batch)),
+         yearbatch = factor(paste(year, batch)) %&gt;% fct_reorder(rundate))
+
+meta.mix &lt;- left_join(stds.meta, stds) #joins the metadata and the peak areas
+stds &lt;- meta.mix %&gt;% select(Filename, all_of(mergedmix)) %&gt;% #reorder stds to match stds.meta
+  column_to_rownames(&quot;Filename&quot;) 
+
+meta.mix.long &lt;- meta.mix %&gt;% 
+  pivot_longer(all_of(mergedmix), names_to=&quot;standard&quot;, values_to=&quot;area&quot;) %&gt;% 
+  filter(type==&quot;Standards&quot; | 
+           (standard == &quot;indole&quot; &amp; type == &quot;Indole&quot;) | #indole only
+           (standard == &quot;a-pinene&quot; &amp; type==&quot;PineneOctanone&quot;), #special mix with just these two
+         !(standard==&quot;benzaldehyde&quot; &amp; year(rundate) &gt; 2018),
+         !(standard==&quot;a-farnesol&quot; &amp; year(rundate) &gt; 2019),#stopped using these standards
+         !(standard==&quot;a-farnesene&quot; &amp; year(rundate) &lt; 2021),#started using this standard instead
+         !(standard == &quot;methyl 2-hydroxybenzoate&quot; &amp; batch==&quot;2021fresh&quot;), #forgot to add standard
+         !(standard == &quot;indole&quot; &amp; batch==&quot;freshstds_noindole&quot;), #did not add standard
+         is.na(exclude)) #manually drop particular files - see notes
+
+#TODO look at the rest of these exclusions
+# batches_sans_stds &lt;- c(&quot;2018 leak&quot;, &quot;newxfer_leak&quot;,  &quot;Diane&quot;, &quot;2019fresh&quot;,&quot;2018old&quot;, &quot;Warmup&quot;)
+# batches_sans_indole &lt;- c(batches_sans_stds, &quot;freshstds_noindole&quot;)
+# datebatches_sans_stds &lt;- c(&quot;2018-09-03 2018 no leak&quot;)
+# datebatches_sans_indole &lt;- c(datebatches_sans_stds, &quot;2019-06-21 2018fresh&quot;, &quot;2017-06-30 2017 good&quot;)
+#TODO check excluded peak areas in &quot;rmbl/Standards/metadata/regressions_2019_prexfer_filtered.csv&quot;</code></pre>
+<div id="inventory" class="section level1">
+<h1>Inventory</h1>
+<pre class="r"><code>stds.meta %&gt;% count(year, type) %&gt;% pivot_wider(names_from=&quot;type&quot;, values_from=&quot;n&quot;) %&gt;% 
+  kable(caption=&quot;chromatograms in each year by type&quot;)</code></pre>
+<table>
+<caption>chromatograms in each year by type</caption>
+<colgroup>
+<col width="20%" />
+<col width="9%" />
+<col width="11%" />
+<col width="12%" />
+<col width="12%" />
+<col width="8%" />
+<col width="6%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="right">Alkanes</th>
+<th align="right">Standards</th>
+<th align="right">3Standards</th>
+<th align="right">4Standards</th>
+<th align="right">Indole</th>
+<th align="right">Blank</th>
+<th align="right">PineneOctanone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="right">1</td>
+<td align="right">19</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">2018a_leak</td>
+<td align="right"></td>
+<td align="right">27</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="right">6</td>
+<td align="right">49</td>
+<td align="right">2</td>
+<td align="right">10</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">2019a_oldxfer</td>
+<td align="right">1</td>
+<td align="right">25</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">5</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2019b_newxfer</td>
+<td align="right">2</td>
+<td align="right">37</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">2021a_oldfil</td>
+<td align="right"></td>
+<td align="right">23</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2021b_newfil</td>
+<td align="right"></td>
+<td align="right">23</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">2022a_oldflowpath</td>
+<td align="right"></td>
+<td align="right">22</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">3</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2022b_newflowpath</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">2</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">2023a_fil1</td>
+<td align="right"></td>
+<td align="right">9</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">3</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>#3Standards and 4Standards are mixes with low peak areas, not sure which standards they contain
+
+stds.meta %&gt;% filter(!type %in% c(&quot;Alkanes&quot;,&quot;Blank&quot;)) %&gt;% count(year, batch, rundate) %&gt;% 
+  kable(caption=&quot;chromatograms in each batch (excl. alkanes and blanks)&quot;) </code></pre>
+<table>
+<caption>chromatograms in each batch (excl. alkanes and
+blanks)</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">batch</th>
+<th align="left">rundate</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-06-30</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-07-10</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-07-11</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-07-12</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-07-13</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-07-24</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="left">2017 good</td>
+<td align="left">2017-07-25</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-06-15</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-06-16</td>
+<td align="right">5</td>
+</tr>
+<tr class="even">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-06-23</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-06-27</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-06-29</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-06-30</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-07-05</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">2018a_leak</td>
+<td align="left">2018 leak</td>
+<td align="left">2018-07-06</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 3mix</td>
+<td align="left">2018-08-12</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 4mix</td>
+<td align="left">2018-08-25</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 4mix</td>
+<td align="left">2018-09-03</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-07-12</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-07-15</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-08-06</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-08-07</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-08-08</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-08-09</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-08-18</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-08-24</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">2018b_noleak</td>
+<td align="left">2018 no leak</td>
+<td align="left">2018-09-03</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">2019a_oldxfer</td>
+<td align="left">2018fresh</td>
+<td align="left">2019-06-21</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">2019a_oldxfer</td>
+<td align="left">2018old</td>
+<td align="left">2019-06-21</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">2019a_oldxfer</td>
+<td align="left">2019fresh</td>
+<td align="left">2019-06-20</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">2019a_oldxfer</td>
+<td align="left">Diane</td>
+<td align="left">2019-06-20</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2019a_oldxfer</td>
+<td align="left">Indole tests1</td>
+<td align="left">2019-06-21</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">2019a_oldxfer</td>
+<td align="left">Warmup</td>
+<td align="left">2019-06-19</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">2019b_newxfer</td>
+<td align="left">2018old</td>
+<td align="left">2019-07-23</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">2019b_newxfer</td>
+<td align="left">Indole tests 2</td>
+<td align="left">2019-07-19</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="left">2019b_newxfer</td>
+<td align="left">freshstds_noindole</td>
+<td align="left">2019-07-25</td>
+<td align="right">11</td>
+</tr>
+<tr class="odd">
+<td align="left">2019b_newxfer</td>
+<td align="left">newxfer_leak</td>
+<td align="left">2019-07-23</td>
+<td align="right">13</td>
+</tr>
+<tr class="even">
+<td align="left">2019b_newxfer</td>
+<td align="left">newxfer_noleak</td>
+<td align="left">2019-07-24</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">2019b_newxfer</td>
+<td align="left">newxfer_noleak</td>
+<td align="left">2019-07-25</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">2021a_oldfil</td>
+<td align="left">2021fresh</td>
+<td align="left">2021-06-24</td>
+<td align="right">11</td>
+</tr>
+<tr class="odd">
+<td align="left">2021a_oldfil</td>
+<td align="left">2021newfresh</td>
+<td align="left">2021-07-01</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="left">2021b_newfil</td>
+<td align="left">2021mix0826</td>
+<td align="left">2021-08-26</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">2021b_newfil</td>
+<td align="left">2021newfil2</td>
+<td align="left">2021-07-23</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td align="left">2022a_oldflowpath</td>
+<td align="left">2022mixD1</td>
+<td align="left">2022-06-28</td>
+<td align="right">5</td>
+</tr>
+<tr class="odd">
+<td align="left">2022a_oldflowpath</td>
+<td align="left">2022mixD1</td>
+<td align="left">2022-06-30</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2022a_oldflowpath</td>
+<td align="left">2022mixD1</td>
+<td align="left">2022-07-06</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="left">2022a_oldflowpath</td>
+<td align="left">2022mixD2</td>
+<td align="left">2022-07-01</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2022a_oldflowpath</td>
+<td align="left">2022mixD2</td>
+<td align="left">2022-07-05</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="left">2022a_oldflowpath</td>
+<td align="left">2022mixD2</td>
+<td align="left">2022-07-06</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">2022b_newflowpath</td>
+<td align="left">2022mixD2nosyrup</td>
+<td align="left">2022-09-28</td>
+<td align="right">9</td>
+</tr>
+<tr class="odd">
+<td align="left">2023a_fil1</td>
+<td align="left">2023mix620</td>
+<td align="left">2023-06-20</td>
+<td align="right">9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="peak-areas" class="section level1">
+<h1>Peak areas</h1>
+<pre class="r"><code>walk(mergedmix, function(chem) {
+  meta.mix.long %&gt;% filter(standard==chem) %&gt;% 
+    ggplot(aes(x=fct_rev(factor(paste(rundate, year, batch))), y=area, color=log10(conc)))  + 
+    geom_point(size=2) + geom_line(aes(group=conc)) + coord_flip()+
+    scale_y_log10() + scale_color_gradient(low=&quot;purple&quot;,high=&quot;orange&quot;) +
+    labs(title=chem, x=&quot;Batch&quot;, y=&quot;Area&quot;) + theme(axis.text.y = element_text(hjust=0)) 
+  ggsave(filename=paste0(&quot;output/standards/area/area_&quot;,chem,&quot;.svg&quot;), width=8, height=6)
+})</code></pre>
+</div>
+<div id="regressions" class="section level1">
+<h1>Regressions</h1>
+<p>Regressions are plotted in output/standards/regressions</p>
+<pre class="r"><code>walk(mergedmix, function(chem) {
+  meta.mix.long %&gt;% filter(standard==chem) %&gt;% 
+    ggplot(aes(x=conc, group=datebatch, color=year, y=area)) +
+    scale_x_log10(&quot;Concentration (mg/mL)&quot;) + scale_y_log10(&quot;Area&quot;) + #ignores zeros
+    stat_smooth(method=&quot;lm&quot;, formula = y~x, se=F, geom=&quot;line&quot;, alpha=1, size=1) + 
+    geom_point(pch=24, size=2) + 
+    scale_color_brewer(&quot;Year&quot;, palette=&quot;Set3&quot;, type=&quot;qual&quot;) + 
+    theme_minimal() + ggtitle(chem)
+  ggsave(filename=paste0(&quot;output/standards/regressions/regression_&quot;,chem,&quot;.svg&quot;), width=8, height=6)
+})</code></pre>
+<pre class="r"><code>slopes &lt;- meta.mix.long %&gt;% 
+  mutate(mass_ng = conc * 3 * 1000) %&gt;% # concentration in ug/uL * 3 uL * 1000 ng/ug = mass of standard pipetted in ng
+  group_by(year, yearbatch, batch, type, standard) %&gt;% nest() %&gt;% 
+  mutate(model = map(data, ~ lm(area ~ mass_ng + 0, data=.x)), #force through zero (no intercept)
+         area_per_ng = map_dbl(model, coef),
+         ng_per_area = (1/map_dbl(model, coef)),
+         r2 = map_dbl(model, ~ summary(.x)$r.squared),
+         n = map_int(data, nrow)) %&gt;% 
+  select(-data, -model) %&gt;% 
+  write_csv(&quot;output/standards/regression_slopes.csv&quot;)
+
+# ggplot(slopes, aes(x= fct_rev(yearbatch), y = area_per_ng, color=r2)) + facet_wrap(vars(standard), scales=&quot;free_x&quot;) +
+#   geom_line(aes(group=standard), color=&quot;black&quot;) + geom_point(aes(size=n)) + coord_flip() + 
+#   theme(axis.text.y = element_text(hjust=0)) + labs(y=&quot;Area/ng&quot;, x=&quot;Batch&quot;) + theme_minimal()
+
+ggplot(slopes, aes(x= fct_rev(yearbatch), y = area_per_ng, color=standard)) + 
+  geom_line(aes(group=standard), color=&quot;black&quot;) + geom_point(aes(size=n)) + coord_flip() + 
+  theme(axis.text.y = element_text(hjust=0)) + labs(y=&quot;Area/ng&quot;, x=&quot;Batch&quot;) + theme_minimal()+
+  scale_color_brewer(palette = &quot;Set1&quot;) + scale_y_sqrt()</code></pre>
+<p><img src="images-standards/run_regressions-1.svg" width="768" /></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
