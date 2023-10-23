@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2023-10-04" />
+<meta name="date" content="2023-10-21" />
 
 <title>RMBL GCMS Standards</title>
 
@@ -253,7 +253,7 @@ div.tocify {
 <h1 class="title toc-ignore">RMBL GCMS Standards</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2023-10-04</h4>
+<h4 class="date">2023-10-21</h4>
 
 </div>
 
@@ -263,7 +263,8 @@ library(reshape2)
 library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images-standards/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
-options(knitr.kable.NA = &quot;&quot;)</code></pre>
+options(knitr.kable.NA = &quot;&quot;)
+ggplot2::theme_set(theme_minimal())</code></pre>
 <pre class="r"><code># source(&quot;read_shimadzu.R&quot;)
 # #grab all the files in the data folder - add new Shimadzu output here and give it 2 digit prefix number
 # setwd(&quot;~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/Standards/data&quot;)
@@ -786,8 +787,7 @@ blanks)</caption>
     scale_x_log10(&quot;Concentration (mg/mL)&quot;) + scale_y_log10(&quot;Area&quot;) + #ignores zeros
     stat_smooth(method=&quot;lm&quot;, formula = y~x, se=F, geom=&quot;line&quot;, alpha=1, size=1) + 
     geom_point(pch=24, size=2) + 
-    scale_color_brewer(&quot;Year&quot;, palette=&quot;Set3&quot;, type=&quot;qual&quot;) + 
-    theme_minimal() + ggtitle(chem)
+    scale_color_brewer(&quot;Year&quot;, palette=&quot;Set3&quot;, type=&quot;qual&quot;) + ggtitle(chem)
   ggsave(filename=paste0(&quot;output/standards/regressions/regression_&quot;,chem,&quot;.svg&quot;), width=8, height=6)
 })</code></pre>
 <pre class="r"><code>slopes &lt;- meta.mix.long %&gt;% 
@@ -803,13 +803,64 @@ blanks)</caption>
 
 # ggplot(slopes, aes(x= fct_rev(yearbatch), y = area_per_ng, color=r2)) + facet_wrap(vars(standard), scales=&quot;free_x&quot;) +
 #   geom_line(aes(group=standard), color=&quot;black&quot;) + geom_point(aes(size=n)) + coord_flip() + 
-#   theme(axis.text.y = element_text(hjust=0)) + labs(y=&quot;Area/ng&quot;, x=&quot;Batch&quot;) + theme_minimal()
+#   theme(axis.text.y = element_text(hjust=0)) + labs(y=&quot;Area/ng&quot;, x=&quot;Batch&quot;)
 
 ggplot(slopes, aes(x= fct_rev(yearbatch), y = area_per_ng, color=standard)) + 
   geom_line(aes(group=standard), color=&quot;black&quot;) + geom_point(aes(size=n)) + coord_flip() + 
-  theme(axis.text.y = element_text(hjust=0)) + labs(y=&quot;Area/ng&quot;, x=&quot;Batch&quot;) + theme_minimal()+
+  theme(axis.text.y = element_text(hjust=0)) + labs(y=&quot;Area/ng&quot;, x=&quot;Batch&quot;) +
   scale_color_brewer(palette = &quot;Set1&quot;) + scale_y_sqrt()</code></pre>
 <p><img src="images-standards/run_regressions-1.svg" width="768" /></p>
+</div>
+<div id="alkanes" class="section level1">
+<h1>Alkanes</h1>
+<pre class="r"><code>alkanes &lt;- read_csv(&quot;data/alkanes.csv&quot;) %&gt;% select(-RT_kmeans)
+
+alk.data.name &lt;- alkanes %&gt;% left_join(stds.data, join_by(Name)) %&gt;% select(-Synonyms) %&gt;% 
+  filter(str_detect(Filename, &quot;Alk|ALK&quot;), Ret.Time &gt; 2, Ret.Time &lt; 19.5) %&gt;% #C6-C18
+  mutate(gc_method = str_extract(Filename,&quot;Adams|Tendeg&quot;) %&gt;% replace_na(&quot;Ipo&quot;)) %&gt;% filter(gc_method==&quot;Ipo&quot;) %&gt;% 
+  mutate(date = Filename %&gt;% str_extract(&quot;[0-9]+20[0-9]+&quot;) %&gt;% str_replace(&quot;^([1-9]+)&quot;,&quot;0\\1&quot;) %&gt;% mdy(),
+         n.kmean = kmeans(Ret.Time, centers = alkanes %&gt;% filter(n&gt;=6, n&lt;=18) %&gt;% pull(RT_2022))$cluster + 5)
+
+alkanes &lt;- alkanes %&gt;% select(-any_of(&quot;RT_kmeans&quot;)) %&gt;% 
+  left_join(alk.data.name %&gt;% group_by(n.kmean) %&gt;% summarize(RT_kmeans = median(Ret.Time)), join_by(n==n.kmean)) %&gt;% 
+  write_csv(&quot;data/alkanes.csv&quot;)
+get_kovats &lt;- with(alkanes, approxfun(x = RT_kmeans, y = n * 100)) #Linear interpolation
+save(alkanes, get_kovats, file=&quot;output/get_kovats.rda&quot;)
+
+alk.data &lt;- alk.data.name %&gt;% select(-any_of(colnames(alkanes))) %&gt;% left_join(alkanes, join_by(n.kmean==n)) 
+
+ggplot(alk.data, aes(x=Ret.Time, y=Filename)) + 
+  geom_rug(sides=&quot;b&quot;) + geom_text(aes(label=n.kmean, color=factor(n.kmean))) +
+  scale_x_continuous(breaks=alkanes$n, minor_breaks = NULL) + guides(color=&quot;none&quot;)</code></pre>
+<p><img src="images-standards/alkanes-1.svg" width="768" /></p>
+<pre class="r"><code>ggplot(alk.data %&gt;% rename(n=n.kmean), aes(x=Ret.Time, color=as.character(n), y=Area)) + 
+  geom_vline(data=alkanes, aes(xintercept=RT_kmeans)) + 
+  geom_text(data=alkanes, aes(x=RT_kmeans, y=2e8, label=n))+
+  geom_point(data=alkanes, aes(x=RT_2022, y = 1e8))  +
+  geom_path(aes(group=Filename)) + geom_point(size=2) + geom_rug(sides=&quot;b&quot;) +
+  scale_y_sqrt() + guides(color=&quot;none&quot;)</code></pre>
+<p><img src="images-standards/alkanes-2.svg" width="768" /></p>
+<pre class="r"><code>alk.data %&gt;% mutate(RT_offset = Ret.Time - RT_2022,
+                    Filename = fct_reorder(Filename, -RT_offset, .fun=median)) %&gt;% 
+  ggplot(aes(x=n.kmean, y=RT_offset, color=factor(date))) +
+  geom_line(aes(group=Filename)) + geom_point(aes(size=Area)) + 
+  scale_x_continuous(breaks=alkanes$n, minor_breaks = NULL)</code></pre>
+<p><img src="images-standards/alkanes-3.svg" width="768" /></p>
+<pre class="r"><code>ggplot(alk.data, aes(x=n.kmean, y=Ret.Time, color=factor(date))) + 
+  geom_line(size=0.3) + geom_line(data=drop_na(alkanes, RT_2022), aes(x=n, y=RT_2022), color=&quot;black&quot;) + geom_point() +
+  scale_x_continuous(breaks=alkanes$n, minor_breaks = NULL) </code></pre>
+<p><img src="images-standards/alkanes-4.svg" width="768" /></p>
+<pre class="r"><code>#See if there are misidentified alkane peaks - not many
+# alk.data.all &lt;- stds.data %&gt;% filter(str_detect(Filename, &quot;Alk|ALK&quot;), !str_detect(Filename,&quot;Adams|Tendeg&quot;), 
+#                                      Ret.Time &gt; 2, Ret.Time &lt; 19.5, Height &gt; 8e5)
+# 
+# ggplot(alk.data.all, aes(x=Ret.Time, y=Height, color=Filename, 
+#                          shape=ifelse(Name %in% alkanes$Name, &quot;Alkane&quot;, 
+#                                       ifelse(Name==&quot;&quot;, &quot;No ID&quot;,&quot;Not alkane&quot;)))) +
+#   geom_point() + geom_line() + geom_rug(sides=&quot;b&quot;) + geom_text(aes(label=Name)) + 
+#   scale_x_continuous(breaks=1:26) +  scale_shape_manual(&quot;Alkane&quot;, values=c(19,4,1)) + scale_y_sqrt()
+# 
+# alk.data.all %&gt;% count(Name) %&gt;% filter(!Name %in% alkanes$Name, n&gt;1) %&gt;% arrange(desc(n))</code></pre>
 </div>
 
 
