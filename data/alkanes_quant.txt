@@ -1,0 +1,600 @@
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alk_3ul_0.01_MeOH_6202019_03.qgd
+Output Date	10/23/2023
+Output Time	2:09:27 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.552	2.500	2.620	2.750	30888	11218	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	58.73	0.00	93	69.00	0	0	46.18	58.73	41.00	0	0	42.29	52.97	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.037										0.000	
+2	Heptane	Target	0	43.00	3.290	3.220	3.360	2.400	84967	35417	0.00000	Auto	7	3.320	Linear	0	0	0	0	0	0	64.94	64.16	0.00	90	71.00	0	0	64.94	64.16	57.00	0	0	55.02	89.81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.043										0.000	
+3	Octane 	Target	0	43.00	4.837	4.740	4.920	1.800	213426	118469	0.00000	Auto	13	4.855	Linear	0	0	0	0	0	0	54.30	49.50	0.00	95	85.00	0	0	54.30	49.50	57.00	0	0	45.45	44.39	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.160										0.000	
+4	Nonane 	Target	0	57.00	6.609	6.575	6.680	1.730	188838	109296	0.00000	Auto	17	6.620	Linear	0	0	0	0	0	0	94.11	111.08	0.00	97	43.00	0	0	94.11	111.08	85.00	0	0	37.38	45.66	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.532										0.000	
+5	Decane	Target	0	57.00	8.364	8.330	8.400	1.540	201986	131131	0.00000	Auto	22	8.365	Linear	0	0	0	0	0	0	76.53	89.85	0.00	96	43.00	0	0	76.53	89.85	71.00	0	0	40.61	51.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.059										0.000	
+6	Undecane 	Target	0	57.00	10.020	9.980	10.065	1.540	197052	128207	0.00000	Auto	26	10.015	Linear	0	0	0	0	0	0	69.23	79.60	0.00	85	43.00	0	0	69.23	79.60	71.00	0	0	51.26	64.66	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.050										0.000	
+7	Dodecane 	Target	0	57.00	11.566	11.510	11.610	1.490	163110	109528	0.00000	Auto	32	11.555	Linear	0	0	0	0	0	0	65.29	75.68	0.00	96	43.00	0	0	65.29	75.68	71.00	0	0	59.10	74.07	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.023										0.000	
+8	Tridecane 	Target	0	57.00	13.013	12.980	13.055	1.580	112236	71114	0.00000	Auto	36	13.000	Linear	0	0	0	0	0	0	64.53	81.89	0.00	96	71.00	0	0	64.53	81.89	43.00	0	0	62.41	72.90	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.011										0.000	
+9	Tetradecane 	Target	0	57.00	14.371	14.335	14.410	1.500	82385	55102	0.00000	Auto	43	14.355	Linear	0	0	0	0	0	0	66.81	83.55	0.00	96	71.00	0	0	66.81	83.55	43.00	0	0	59.29	65.78	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.989										0.000	
+10	Pentadecane 	Target	0	57.00	15.653	15.580	15.705	1.780	51010	28685	0.00000	Auto	47	15.635	Linear	0	0	0	0	0	0	69.21	84.39	0.00	96	71.00	0	0	69.21	84.39	43.00	0	0	56.54	66.41	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.960										0.000	
+11	Hexadecane 	Target	0	57.00	16.879	16.845	16.930	3.400	15281	4491	0.00000	Auto	53	16.855	Linear	0	0	0	0	0	0	70.23	96.58	0.00	50	71.00	0	0	70.23	96.58	43.00	0	0	54.07	64.46	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.404										0.000	
+12	n-Hexane	Target	0	57.00	2.309	2.235	2.655	2.630	4425843	1681266	0.00000	Auto	56	2.340	Linear	0	0	0	0	0	0	94.31	54.75	0.00	91	56.00	0	0	94.31	54.75	41.00	0	0	93.38	74.28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.977										0.000	
+13	Heptadecane 	Target	0	57.00	18.012	17.975	18.035	2.180	9501	4356	0.00000	Auto	59	17.935	Linear	0	0	0	0	0	0	74.25	95.43	0.00	83	71.00	0	0	74.25	95.43	43.00	0	0	63.70	53.55	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.804										0.000	
+14	Octadecane 	Target	0	57.00	19.096	19.060	19.130	1.530	61010	39779	0.00000	Auto	65	19.025	Linear	0	0	0	0	0	0	75.24	89.08	0.00	95	71.00	0	0	75.24	89.08	43.00	0	0	62.49	56.79	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.194										0.000	
+15	Nonadecane 	Target	0	57.00	19.904	19.875	19.925	1.550	17443	11275	0.00000	Auto	70	19.895	Linear	0	0	0	0	0	0	76.67	102.56	0.00	87	71.00	0	0	76.67	102.56	43.00	0	0	61.39	54.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.928										0.000	
+16	Eicosane 	Target	0	57.00	20.433	20.410	20.460	1.430	4477	3129	0.00000	Auto	77	20.560	Linear	0	0	0	0	0	0	78.25	85.86	0.00	65	71.00	0	0	78.25	85.86	43.00	0	0	61.38	47.02	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.068										0.000	
+17	Heneicosane 	Target	0	57.00	21.510	21.490	21.520	1.570	10732	6830	0.00000	Auto	79	21.595	Linear	0	0	0	0	0	0	78.51	43.45	0.00	51	71.00	0	0	78.51	43.45	43.00	0	0	61.78	59.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.744										0.000	
+18	Docosane 	Target	0	57.00	22.194	22.175	22.225	2.240	5103	2278	0.00000	Auto	88	22.095	Linear	0	0	0	0	0	0	77.34	44.40	0.00	31	71.00	0	0	77.34	44.40	43.00	0	0	60.78	70.95	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.304										0.000	
+19	Tricosane 	Target	0	57.00	22.674	22.620	22.685	2.850	6420	2254	0.00000	Auto	91	22.635	Linear	0	0	0	0	0	0	78.16	40.00	0.00	36	71.00	0	0	78.16	40.00	43.00	0	0	59.39	45.89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.602										0.000	
+20	Tetracosane 	Target	0	57.00	23.340	23.290	23.370	2.620	13439	5120	0.00000	Auto	96	23.240	Linear	0	0	0	0	0	0	78.87	65.04	0.00	72	71.00	0	0	78.87	65.04	43.00	0	0	59.95	35.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.858										0.000	
+21	Pentacosane 	Target	0	57.00	23.785	23.740	23.840	2.100	72874	34661	0.00000	Auto	100	23.935	Linear	0	0	0	0	0	0	78.36	105.11	0.00	48	71.00	0	0	78.36	105.11	43.00	0	0	59.80	61.70	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.468										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\AlkanesHigh_8272021_01.qgd
+Output Date	10/23/2023
+Output Time	2:09:28 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																	0.00														0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	4.711	4.685	4.750	1.760	23323	13228	0.00000	Auto	11	4.855	Linear	0	0	0	0	0	0	54.30	29.20	0.00	80	85.00	0	0	54.30	29.20	57.00	0	0	45.45	80.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.154										0.000	
+4	Nonane 	Target	0	57.00	6.516	6.485	6.575	2.190	30257	13827	0.00000	Auto	13	6.620	Linear	0	0	0	0	0	0	94.11	92.98	0.00	95	43.00	0	0	94.11	92.98	85.00	0	0	37.38	36.49	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.472										0.000	
+5	Decane	Target	0	57.00	8.287	8.250	8.325	1.510	1038999	688279	0.00000	Auto	17	8.365	Linear	0	0	0	0	0	0	76.53	73.51	0.00	99	43.00	0	0	76.53	73.51	71.00	0	0	40.61	41.74	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.029										0.000	
+6	Undecane 	Target	0	57.00	10.025	10.000	10.075	1.680	115028	68529	0.00000	Auto	23	10.015	Linear	0	0	0	0	0	0	69.23	48.93	0.00	68	43.00	0	0	69.23	48.93	71.00	0	0	51.26	13.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.106										0.000	
+7	Dodecane 	Target	0	57.00	11.513	11.455	11.570	1.800	13127022	7306495	0.00000	Auto	27	11.555	Linear	0	0	0	0	0	0	65.29	79.93	0.00	96	43.00	0	0	65.29	79.93	71.00	0	0	59.10	72.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.866										0.000	
+8	Tridecane 	Target	0	57.00	13.007	12.995	13.170	1.650	1107317	669198	0.00000	Auto	31	13.000	Linear	0	0	0	0	0	0	64.53	64.61	0.00	96	71.00	0	0	64.53	64.61	43.00	0	0	62.41	58.57	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.525										0.000	
+9	Tetradecane 	Target	0	57.00	14.333	14.265	14.575	3.120	24918836	7980962	0.00000	Auto	35	14.355	Linear	0	0	0	0	0	0	66.81	91.88	0.00	92	71.00	0	0	66.81	91.88	43.00	0	0	59.29	88.46	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.090										0.000	
+10	Pentadecane 	Target	0	57.00	15.618	15.545	15.735	3.380	27017561	7988274	0.00000	Auto	39	15.635	Linear	0	0	0	0	0	0	69.21	93.88	0.00	92	71.00	0	0	69.21	93.88	43.00	0	0	56.54	86.73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.083										0.000	
+11	Hexadecane 	Target	0	57.00	16.828	16.760	16.860	2.830	22499850	7958949	0.00000	Auto	44	16.855	Linear	0	0	0	0	0	0	70.23	98.23	0.00	87	71.00	0	0	70.23	98.23	43.00	0	0	54.07	86.76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.846										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	18.028	17.925	18.055	4.910	13366029	2724516	0.00000	Auto	53	17.935	Linear	0	0	0	0	0	0	74.25	70.44	0.00	98	71.00	0	0	74.25	70.44	43.00	0	0	63.70	53.61	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.663										0.000	
+14	Octadecane 	Target	0	57.00	19.082	19.060	19.110	1.400	6226	4461	0.00000	Auto	56	19.025	Linear	0	0	0	0	0	0	75.24	55.00	0.00	59	71.00	0	0	75.24	55.00	43.00	0	0	62.49	79.71	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.140										0.000	
+15	Nonadecane 	Target	0	57.00	19.730	19.695	19.780	4.450	518322	116523	0.00000	Auto	60	19.895	Linear	0	0	0	0	0	0	76.67	82.63	0.00	89	71.00	0	0	76.67	82.63	43.00	0	0	61.39	36.97	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.214										0.000	
+16	Eicosane 	Target	0	57.00	20.562	20.535	20.615	1.840	72655	39400	0.00000	Auto	66	20.560	Linear	0	0	0	0	0	0	78.25	60.74	0.00	82	71.00	0	0	78.25	60.74	43.00	0	0	61.38	44.54	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.209										0.000	
+17	Heneicosane 	Target	0	57.00	21.580	21.575	21.600	1.290	230332	179023	0.00000	Auto	70	21.595	Linear	0	0	0	0	0	0	78.51	92.61	0.00	70	71.00	0	0	78.51	92.61	43.00	0	0	61.78	51.81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.500										0.000	
+18	Docosane 	Target	0	57.00	22.114	22.090	22.150	1.450	193926	134089	0.00000	Auto	77	22.095	Linear	0	0	0	0	0	0	77.34	74.61	0.00	91	71.00	0	0	77.34	74.61	43.00	0	0	60.78	42.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.033										0.000	
+19	Tricosane 	Target	0	57.00	22.651	22.625	22.670	1.620	156320	96556	0.00000	Auto	79	22.635	Linear	0	0	0	0	0	0	78.16	72.56	0.00	87	71.00	0	0	78.16	72.56	43.00	0	0	59.39	49.48	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.938										0.000	
+20	Tetracosane 	Target	0	57.00	23.253	23.220	23.285	2.020	159187	78838	0.00000	Auto	85	23.240	Linear	0	0	0	0	0	0	78.87	73.38	0.00	95	71.00	0	0	78.87	73.38	43.00	0	0	59.95	40.91	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.048										0.000	
+21	Pentacosane 	Target	0	57.00	23.953	23.920	23.975	1.690	139895	82824	0.00000	Auto	92	23.935	Linear	0	0	0	0	0	0	78.36	69.97	0.00	96	71.00	0	0	78.36	69.97	43.00	0	0	59.80	42.13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.891										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alkanes3uLof10uLmL_9282022_10.qgd
+Output Date	10/23/2023
+Output Time	2:09:28 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.629	2.575	2.725	3.160	114430	36205	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	43.65	0.00	94	69.00	0	0	46.18	43.65	41.00	0	0	42.29	50.54	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.054										0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	4.821	4.715	4.880	1.780	23111	12992	0.00000	Auto	13	4.855	Linear	0	0	0	0	0	0	54.30	22.65	0.00	79	85.00	0	0	54.30	22.65	57.00	0	0	45.45	57.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.091										0.000	
+4	Nonane 	Target	0	57.00	6.559	6.535	6.610	1.950	13080	6694	0.00000	Auto	15	6.620	Linear	0	0	0	0	0	0	94.11	108.92	0.00	77	43.00	0	0	94.11	108.92	85.00	0	0	37.38	36.97	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.532										0.000	
+5	Decane	Target	0	57.00	8.295	8.260	8.325	1.480	95332	64389	0.00000	Auto	17	8.365	Linear	0	0	0	0	0	0	76.53	90.53	0.00	96	43.00	0	0	76.53	90.53	71.00	0	0	40.61	41.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.030										0.000	
+6	Undecane 	Target	0	57.00	9.942	9.905	9.975	1.520	639684	422064	0.00000	Auto	21	10.015	Linear	0	0	0	0	0	0	69.23	80.83	0.00	98	43.00	0	0	69.23	80.83	71.00	0	0	51.26	51.51	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.019										0.000	
+7	Dodecane 	Target	0	57.00	11.585	11.545	11.635	1.700	48828	28741	0.00000	Auto	27	11.555	Linear	0	0	0	0	0	0	65.29	90.25	0.00	74	43.00	0	0	65.29	90.25	71.00	0	0	59.10	52.92	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.130										0.000	
+8	Tridecane 	Target	0	57.00	12.987	12.965	13.030	1.900	48949	25777	0.00000	Auto	30	13.000	Linear	0	0	0	0	0	0	64.53	67.31	0.00	83	71.00	0	0	64.53	67.31	43.00	0	0	62.41	82.42	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.489										0.000	
+9	Tetradecane 	Target	0	57.00	14.294	14.210	14.395	1.860	2233380	1200356	0.00000	Auto	34	14.355	Linear	0	0	0	0	0	0	66.81	68.17	0.00	98	71.00	0	0	66.81	68.17	43.00	0	0	59.29	70.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.301										0.000	
+10	Pentadecane 	Target	0	57.00	15.576	15.520	15.635	1.670	2388313	1432294	0.00000	Auto	38	15.635	Linear	0	0	0	0	0	0	69.21	69.89	0.00	98	71.00	0	0	69.21	69.89	43.00	0	0	56.54	67.53	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.959										0.000	
+11	Hexadecane 	Target	0	57.00	16.787	16.735	16.845	1.670	2619294	1571449	0.00000	Auto	43	16.855	Linear	0	0	0	0	0	0	70.23	72.13	0.00	93	71.00	0	0	70.23	72.13	43.00	0	0	54.07	65.08	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.870										0.000	
+12	n-Hexane	Target	0	57.00	2.293	2.255	2.320	2.530	7497	2959	0.00000	Auto	45	2.340	Linear	0	0	0	0	0	0	94.31	98.22	0.00	68	56.00	0	0	94.31	98.22	41.00	0	0	93.38	64.96	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.894										0.000	
+13	Heptadecane 	Target	0	57.00	17.934	17.880	18.045	1.580	2729156	1730336	0.00000	Auto	51	17.935	Linear	0	0	0	0	0	0	74.25	74.24	0.00	99	71.00	0	0	74.25	74.24	43.00	0	0	63.70	63.70	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.891										0.000	
+14	Octadecane 	Target	0	57.00	19.024	18.975	19.090	1.640	2532646	1548022	0.00000	Auto	57	19.025	Linear	0	0	0	0	0	0	75.24	75.22	0.00	99	71.00	0	0	75.24	75.22	43.00	0	0	62.49	62.50	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.883										0.000	
+15	Nonadecane 	Target	0	57.00	19.894	19.835	20.000	1.390	2211302	1589850	0.00000	Auto	60	19.895	Linear	0	0	0	0	0	0	76.67	76.65	0.00	99	71.00	0	0	76.67	76.65	43.00	0	0	61.39	61.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.077										0.000	
+16	Eicosane 	Target	0	57.00	20.562	20.535	20.655	1.490	1353669	907759	0.00000	Auto	68	20.560	Linear	0	0	0	0	0	0	78.25	78.31	0.00	99	71.00	0	0	78.25	78.31	43.00	0	0	61.38	61.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.544										0.000	
+17	Heneicosane 	Target	0	57.00	21.594	21.555	21.635	1.280	442124	346362	0.00000	Auto	71	21.595	Linear	0	0	0	0	0	0	78.51	78.55	0.00	99	71.00	0	0	78.51	78.55	43.00	0	0	61.78	61.55	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.945										0.000	
+18	Docosane 	Target	0	57.00	22.096	22.060	22.230	1.480	832466	561843	0.00000	Auto	76	22.095	Linear	0	0	0	0	0	0	77.34	77.33	0.00	99	71.00	0	0	77.34	77.33	43.00	0	0	60.78	60.79	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.448										0.000	
+19	Tricosane 	Target	0	57.00	22.636	22.590	22.730	1.570	890228	567587	0.00000	Auto	81	22.635	Linear	0	0	0	0	0	0	78.16	78.13	0.00	99	71.00	0	0	78.16	78.13	43.00	0	0	59.39	59.35	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.162										0.000	
+20	Tetracosane 	Target	0	57.00	23.239	23.195	23.400	1.800	610750	339882	0.00000	Auto	87	23.240	Linear	0	0	0	0	0	0	78.87	78.86	0.00	99	71.00	0	0	78.87	78.86	43.00	0	0	59.95	59.98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.400										0.000	
+21	Pentacosane 	Target	0	57.00	23.934	23.890	23.980	1.930	202854	105298	0.00000	Auto	91	23.935	Linear	0	0	0	0	0	0	78.36	78.36	0.00	99	71.00	0	0	78.36	78.36	43.00	0	0	59.80	59.83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.078										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alkanes3uL0.01Ipo_09032018.qgd
+Output Date	10/23/2023
+Output Time	2:09:29 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.569	2.500	2.800	2.840	9024200	3173797	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	46.00	0.00	99	69.00	0	0	46.18	46.00	41.00	0	0	42.29	42.52	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.078										0.000	
+2	Heptane	Target	0	43.00	3.318	3.270	3.390	2.140	243489	113726	0.00000	Auto	6	3.320	Linear	0	0	0	0	0	0	64.94	64.74	0.00	99	71.00	0	0	64.94	64.74	57.00	0	0	55.02	54.74	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.131										0.000	
+3	Octane 	Target	0	43.00	4.856	4.815	4.920	1.740	755864	434886	0.00000	Auto	9	4.855	Linear	0	0	0	0	0	0	54.30	54.28	0.00	99	85.00	0	0	54.30	54.28	57.00	0	0	45.45	45.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.095										0.000	
+4	Nonane 	Target	0	57.00	6.620	6.575	6.700	1.550	959580	617352	0.00000	Auto	10	6.620	Linear	0	0	0	0	0	0	94.11	94.07	0.00	99	43.00	0	0	94.11	94.07	85.00	0	0	37.38	37.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.070										0.000	
+5	Decane	Target	0	57.00	8.367	8.325	8.405	1.520	1270639	835178	0.00000	Auto	12	8.365	Linear	0	0	0	0	0	0	76.53	76.53	0.00	99	43.00	0	0	76.53	76.53	71.00	0	0	40.61	40.61	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.014										0.000	
+6	Undecane 	Target	0	57.00	10.015	9.975	10.060	1.520	1520829	1000259	0.00000	Auto	14	10.015	Linear	0	0	0	0	0	0	69.23	69.21	0.00	99	43.00	0	0	69.23	69.21	71.00	0	0	51.26	51.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.988										0.000	
+7	Dodecane 	Target	0	57.00	11.556	11.510	11.610	1.530	1718984	1122608	0.00000	Auto	17	11.555	Linear	0	0	0	0	0	0	65.29	65.27	0.00	99	43.00	0	0	65.29	65.27	71.00	0	0	59.10	59.10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.972										0.000	
+8	Tridecane 	Target	0	57.00	13.000	12.955	13.035	1.500	1805947	1203772	0.00000	Auto	19	13.000	Linear	0	0	0	0	0	0	64.53	64.54	0.00	99	71.00	0	0	64.53	64.54	43.00	0	0	62.41	62.41	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.962										0.000	
+9	Tetradecane 	Target	0	57.00	14.356	14.315	14.395	1.560	1859728	1190278	0.00000	Auto	21	14.355	Linear	0	0	0	0	0	0	66.81	66.78	0.00	99	71.00	0	0	66.81	66.78	43.00	0	0	59.29	59.26	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.964										0.000	
+10	Pentadecane 	Target	0	57.00	15.636	15.590	15.680	1.580	1914506	1212875	0.00000	Auto	24	15.635	Linear	0	0	0	0	0	0	69.21	69.18	0.00	99	71.00	0	0	69.21	69.18	43.00	0	0	56.54	56.56	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.981										0.000	
+11	Hexadecane 	Target	0	57.00	16.854	16.805	17.140	3.260	2008825	615931	0.00000	Auto	27	16.855	Linear	0	0	0	0	0	0	70.23	70.22	0.00	99	71.00	0	0	70.23	70.22	43.00	0	0	54.07	54.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.635										0.000	
+12	n-Hexane	Target	0	57.00	2.324	2.235	2.745	6.680	55904646	8371444	0.00000	Auto	33	2.340	Linear	0	0	0	0	0	0	94.31	92.56	0.00	99	56.00	0	0	94.31	92.56	41.00	0	0	93.38	92.07	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.284										0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																															0.000	
+14	Octadecane 	Target	0	57.00	19.121	19.090	19.150	2.010	26496	13189	0.00000	Auto	41	19.025	Linear	0	0	0	0	0	0	75.24	44.41	0.00	56	71.00	0	0	75.24	44.41	43.00	0	0	62.49	86.94	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.017										0.000	
+15	Nonadecane 	Target	0	57.00	19.796	19.765	19.870	1.710	249752	146086	0.00000	Auto	46	19.895	Linear	0	0	0	0	0	0	76.67	44.90	0.00	70	71.00	0	0	76.67	44.90	43.00	0	0	61.39	82.27	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.939										0.000	
+16	Eicosane 	Target	0	57.00	20.712	20.690	20.735	1.210	87482	72258	0.00000	Auto	54	20.560	Linear	0	0	0	0	0	0	78.25	54.68	0.00	67	71.00	0	0	78.25	54.68	43.00	0	0	61.38	63.12	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.030										0.000	
+17	Heneicosane 	Target	0	57.00	21.645	21.630	21.685	1.340	27948	20815	0.00000	Auto	58	21.595	Linear	0	0	0	0	0	0	78.51	70.82	0.00	88	71.00	0	0	78.51	70.82	43.00	0	0	61.78	45.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.608										0.000	
+18	Docosane 	Target	0	57.00	22.156	22.130	22.235	1.700	23037	13559	0.00000	Auto	63	22.095	Linear	0	0	0	0	0	0	77.34	69.34	0.00	84	71.00	0	0	77.34	69.34	43.00	0	0	60.78	39.48	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.976										0.000	
+19	Tricosane 	Target	0	57.00	22.736	22.685	22.775	2.310	20646	8934	0.00000	Auto	65	22.635	Linear	0	0	0	0	0	0	78.16	77.98	0.00	56	71.00	0	0	78.16	77.98	43.00	0	0	59.39	33.27	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.843										0.000	
+20	Tetracosane 	Target	0	57.00	23.310	23.295	23.350	1.730	4868	2819	0.00000	Auto	66	23.240	Linear	0	0	0	0	0	0	78.87	66.39	0.00	67	71.00	0	0	78.87	66.39	43.00	0	0	59.95	36.34	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.690										0.000	
+21	Pentacosane 	Target	0	57.00	Not Identified									23.935	Linear	0	0	0	0																																															0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alkanes3uL0.01_08172017.qgd
+Output Date	10/23/2023
+Output Time	2:09:30 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.586	2.555	2.625	1.510	36546	24190	0.00000	Auto	4	2.570	Linear	0	0	0	0	0	0	46.18	35.17	0.00	95	69.00	0	0	46.18	35.17	41.00	0	0	42.29	34.10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.995										0.000	
+2	Heptane	Target	0	43.00	3.317	3.295	3.345	1.350	5716	4239	0.00000	Auto	9	3.320	Linear	0	0	0	0	0	0	64.94	48.07	0.00	67	71.00	0	0	64.94	48.07	57.00	0	0	55.02	52.78	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.013										0.000	
+3	Octane 	Target	0	43.00	4.833	4.815	4.865	1.540	16091	10446	0.00000	Auto	14	4.855	Linear	0	0	0	0	0	0	54.30	54.76	0.00	96	85.00	0	0	54.30	54.76	57.00	0	0	45.45	51.37	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.230										0.000	
+4	Nonane 	Target	0	57.00	6.541	6.495	6.635	1.520	3342659	2193930	0.00000	Auto	16	6.620	Linear	0	0	0	0	0	0	94.11	88.25	0.00	98	43.00	0	0	94.11	88.25	85.00	0	0	37.38	36.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.985										0.000	
+5	Decane	Target	0	57.00	8.319	8.270	8.360	1.520	5325529	3514822	0.00000	Auto	19	8.365	Linear	0	0	0	0	0	0	76.53	71.69	0.00	98	43.00	0	0	76.53	71.69	71.00	0	0	40.61	34.51	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.930										0.000	
+6	Undecane 	Target	0	57.00	9.986	9.945	10.030	1.570	6985468	4440141	0.00000	Auto	23	10.015	Linear	0	0	0	0	0	0	69.23	66.19	0.00	98	43.00	0	0	69.23	66.19	71.00	0	0	51.26	44.82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.902										0.000	
+7	Dodecane 	Target	0	57.00	11.538	11.480	11.590	1.600	8139161	5082924	0.00000	Auto	26	11.555	Linear	0	0	0	0	0	0	65.29	63.56	0.00	98	43.00	0	0	65.29	63.56	71.00	0	0	59.10	53.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.865										0.000	
+8	Tridecane 	Target	0	57.00	12.986	12.935	13.015	1.670	8939672	5339775	0.00000	Auto	29	13.000	Linear	0	0	0	0	0	0	64.53	58.84	0.00	98	71.00	0	0	64.53	58.84	43.00	0	0	62.41	61.35	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.875										0.000	
+9	Tetradecane 	Target	0	57.00	14.348	14.290	14.610	2.250	13101573	5833148	0.00000	Auto	33	14.355	Linear	0	0	0	0	0	0	66.81	63.03	0.00	99	71.00	0	0	66.81	63.03	43.00	0	0	59.29	59.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.649										0.000	
+10	Pentadecane 	Target	0	57.00	15.631	15.565	15.665	1.960	12470478	6377728	0.00000	Auto	35	15.635	Linear	0	0	0	0	0	0	69.21	67.71	0.00	99	71.00	0	0	69.21	67.71	43.00	0	0	56.54	58.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.968										0.000	
+11	Hexadecane 	Target	0	57.00	16.843	16.785	16.925	2.170	14360723	6624986	0.00000	Auto	40	16.855	Linear	0	0	0	0	0	0	70.23	71.63	0.00	94	71.00	0	0	70.23	71.63	43.00	0	0	54.07	56.60	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.198										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	17.990	17.925	18.135	2.000	12905978	6440091	0.00000	Auto	51	17.935	Linear	0	0	0	0	0	0	74.25	73.47	0.00	98	71.00	0	0	74.25	73.47	43.00	0	0	63.70	54.93	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.799										0.000	
+14	Octadecane 	Target	0	57.00	19.101	19.030	19.115	2.900	2118854	729885	0.00000	Auto	55	19.025	Linear	0	0	0	0	0	0	75.24	65.38	0.00	97	71.00	0	0	75.24	65.38	43.00	0	0	62.49	51.53	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.633										0.000	
+15	Nonadecane 	Target	0	57.00	19.782	19.760	19.830	1.260	71913	56939	0.00000	Auto	60	19.895	Linear	0	0	0	0	0	0	76.67	42.23	0.00	71	71.00	0	0	76.67	42.23	43.00	0	0	61.39	81.74	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.088										0.000	
+16	Eicosane 	Target	0	57.00	20.583	20.555	20.610	1.490	17359	11612	0.00000	Auto	67	20.560	Linear	0	0	0	0	0	0	78.25	51.09	0.00	74	71.00	0	0	78.25	51.09	43.00	0	0	61.38	53.56	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.901										0.000	
+17	Heneicosane 	Target	0	57.00	21.608	21.555	21.665	3.540	106542	30134	0.00000	Auto	71	21.595	Linear	0	0	0	0	0	0	78.51	70.67	0.00	84	71.00	0	0	78.51	70.67	43.00	0	0	61.78	42.69	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.161										0.000	
+18	Docosane 	Target	0	57.00	22.125	22.080	22.165	2.090	122842	58791	0.00000	Auto	75	22.095	Linear	0	0	0	0	0	0	77.34	60.91	0.00	49	71.00	0	0	77.34	60.91	43.00	0	0	60.78	50.06	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.952										0.000	
+19	Tricosane 	Target	0	57.00	22.666	22.640	22.695	1.500	19542	13018	0.00000	Auto	81	22.635	Linear	0	0	0	0	0	0	78.16	74.98	0.00	92	71.00	0	0	78.16	74.98	43.00	0	0	59.39	48.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.013										0.000	
+20	Tetracosane 	Target	0	57.00	Not Identified									23.240	Linear	0	0	0	0																																	0.00														0.000	
+21	Pentacosane 	Target	0	57.00	23.872	23.855	23.890	1.110	3905	3511	0.00000	Auto	90	23.935	Linear	0	0	0	0	0	0	78.36	88.60	0.00	77	71.00	0	0	78.36	88.60	43.00	0	0	59.80	21.89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.044										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alkanes_8272021_01.qgd
+Output Date	10/23/2023
+Output Time	2:09:31 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																	0.00														0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	4.694	4.615	4.730	1.990	15296	7680	0.00000	Auto	14	4.855	Linear	0	0	0	0	0	0	54.30	31.61	0.00	80	85.00	0	0	54.30	31.61	57.00	0	0	45.45	81.57	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.662										0.000	
+4	Nonane 	Target	0	57.00	6.507	6.475	6.520	1.620	6586	4078	0.00000	Auto	18	6.620	Linear	0	0	0	0	0	0	94.11	65.91	0.00	72	43.00	0	0	94.11	65.91	85.00	0	0	37.38	47.69	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.769										0.000	
+5	Decane	Target	0	57.00	8.334	8.295	8.380	2.070	23976	11569	0.00000	Auto	24	8.365	Linear	0	0	0	0	0	0	76.53	107.56	0.00	61	43.00	0	0	76.53	107.56	71.00	0	0	40.61	9.54	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.995										0.000	
+6	Undecane 	Target	0	57.00	10.021	9.990	10.090	1.590	66191	41544	0.00000	Auto	29	10.015	Linear	0	0	0	0	0	0	69.23	48.56	0.00	70	43.00	0	0	69.23	48.56	71.00	0	0	51.26	14.72	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.074										0.000	
+7	Dodecane 	Target	0	57.00	11.596	11.550	11.640	1.550	54227	34887	0.00000	Auto	34	11.555	Linear	0	0	0	0	0	0	65.29	78.25	0.00	69	43.00	0	0	65.29	78.25	71.00	0	0	59.10	48.40	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.049										0.000	
+8	Tridecane 	Target	0	57.00	13.001	12.980	13.035	1.770	10390	5872	0.00000	Auto	39	13.000	Linear	0	0	0	0	0	0	64.53	54.99	0.00	54	71.00	0	0	64.53	54.99	43.00	0	0	62.41	54.72	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.331										0.000	
+9	Tetradecane 	Target	0	57.00	14.345	14.330	14.395	1.780	52230	29306	0.00000	Auto	44	14.355	Linear	0	0	0	0	0	0	66.81	66.58	0.00	93	71.00	0	0	66.81	66.58	43.00	0	0	59.29	45.00	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.241										0.000	
+10	Pentadecane 	Target	0	57.00	15.586	15.540	15.690	1.920	422140	220124	0.00000	Auto	48	15.635	Linear	0	0	0	0	0	0	69.21	66.88	0.00	99	71.00	0	0	69.21	66.88	43.00	0	0	56.54	53.89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.678										0.000	
+11	Hexadecane 	Target	0	57.00	16.800	16.740	16.835	1.620	446768	276523	0.00000	Auto	52	16.855	Linear	0	0	0	0	0	0	70.23	68.46	0.00	94	71.00	0	0	70.23	68.46	43.00	0	0	54.07	53.68	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.196										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	17.971	17.920	18.085	4.620	384506	83306	0.00000	Auto	62	17.935	Linear	0	0	0	0	0	0	74.25	68.75	0.00	95	71.00	0	0	74.25	68.75	43.00	0	0	63.70	52.07	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.628										0.000	
+14	Octadecane 	Target	0	57.00	19.155	19.120	19.220	3.750	12220	3256	0.00000	Auto	67	19.025	Linear	0	0	0	0	0	0	75.24	56.70	0.00	59	71.00	0	0	75.24	56.70	43.00	0	0	62.49	63.76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.457										0.000	
+15	Nonadecane 	Target	0	57.00	19.760	19.735	19.790	1.410	20370	14483	0.00000	Auto	72	19.895	Linear	0	0	0	0	0	0	76.67	41.40	0.00	68	71.00	0	0	76.67	41.40	43.00	0	0	61.39	73.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.007										0.000	
+16	Eicosane 	Target	0	57.00	20.561	20.480	20.595	4.000	108452	27106	0.00000	Auto	80	20.560	Linear	0	0	0	0	0	0	78.25	78.23	0.00	79	71.00	0	0	78.25	78.23	43.00	0	0	61.38	38.49	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.672										0.000	
+17	Heneicosane 	Target	0	57.00	21.585	21.575	21.595	1.090	142822	131467	0.00000	Auto	83	21.595	Linear	0	0	0	0	0	0	78.51	54.78	0.00	71	71.00	0	0	78.51	54.78	43.00	0	0	61.78	60.02	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.000										0.000	
+18	Docosane 	Target	0	57.00	22.113	22.090	22.165	1.380	211458	152848	0.00000	Auto	90	22.095	Linear	0	0	0	0	0	0	77.34	73.75	0.00	93	71.00	0	0	77.34	73.75	43.00	0	0	60.78	44.73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.053										0.000	
+19	Tricosane 	Target	0	57.00	22.651	22.610	22.670	1.690	167489	98856	0.00000	Auto	91	22.635	Linear	0	0	0	0	0	0	78.16	69.38	0.00	89	71.00	0	0	78.16	69.38	43.00	0	0	59.39	45.75	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.794										0.000	
+20	Tetracosane 	Target	0	57.00	23.252	23.210	23.280	2.190	176807	80747	0.00000	Auto	98	23.240	Linear	0	0	0	0	0	0	78.87	72.06	0.00	95	71.00	0	0	78.87	72.06	43.00	0	0	59.95	47.09	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.908										0.000	
+21	Pentacosane 	Target	0	57.00	23.953	23.920	23.975	1.800	134231	74544	0.00000	Auto	105	23.935	Linear	0	0	0	0	0	0	78.36	74.19	0.00	97	71.00	0	0	78.36	74.19	43.00	0	0	59.80	43.63	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.886										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alkanes_8262021_13.qgd
+Output Date	10/23/2023
+Output Time	2:09:31 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																	0.00														0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	Not Identified									4.855	Linear	0	0	0	0																																	0.00														0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																	0.00														0.000	
+5	Decane	Target	0	57.00	Not Identified									8.365	Linear	0	0	0	0																																	0.00														0.000	
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																	0.00														0.000	
+7	Dodecane 	Target	0	57.00	11.594	11.560	11.645	1.550	52837	34152	0.00000	Auto	34	11.555	Linear	0	0	0	0	0	0	65.29	73.44	0.00	70	43.00	0	0	65.29	73.44	71.00	0	0	59.10	48.92	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.067										0.000	
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																	0.00														0.000	
+9	Tetradecane 	Target	0	57.00	14.306	14.275	14.330	1.580	26463	16750	0.00000	Auto	41	14.355	Linear	0	0	0	0	0	0	66.81	62.86	0.00	87	71.00	0	0	66.81	62.86	43.00	0	0	59.29	47.06	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.016										0.000	
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																	0.00														0.000	
+11	Hexadecane 	Target	0	57.00	16.970	16.940	17.005	1.610	36732	22776	0.00000	Auto	55	16.855	Linear	0	0	0	0	0	0	70.23	39.56	0.00	62	71.00	0	0	70.23	39.56	43.00	0	0	54.07	77.53	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.077										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																	0.00														0.000	
+14	Octadecane 	Target	0	57.00	19.080	19.055	19.145	1.990	25293	12683	0.00000	Auto	67	19.025	Linear	0	0	0	0	0	0	75.24	47.97	0.00	51	71.00	0	0	75.24	47.97	43.00	0	0	62.49	75.49	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.333										0.000	
+15	Nonadecane 	Target	0	57.00	20.045	20.015	20.065	1.880	18666	9937	0.00000	Auto	72	19.895	Linear	0	0	0	0	0	0	76.67	60.94	0.00	28	71.00	0	0	76.67	60.94	43.00	0	0	61.39	57.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.906										0.000	
+16	Eicosane 	Target	0	57.00	Not Identified									20.560	Linear	0	0	0	0																																															0.000	
+17	Heneicosane 	Target	0	57.00	21.620	21.610	21.640	1.540	130636	84616	0.00000	Auto	84	21.595	Linear	0	0	0	0	0	0	78.51	72.56	0.00	78	71.00	0	0	78.51	72.56	43.00	0	0	61.78	47.67	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.500										0.000	
+18	Docosane 	Target	0	57.00	22.078	22.060	22.095	1.090	14957	13757	0.00000	Auto	89	22.095	Linear	0	0	0	0	0	0	77.34	42.84	0.00	67	71.00	0	0	77.34	42.84	43.00	0	0	60.78	69.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.978										0.000	
+19	Tricosane 	Target	0	57.00	22.655	22.615	22.670	1.510	97911	64750	0.00000	Auto	92	22.635	Linear	0	0	0	0	0	0	78.16	69.46	0.00	90	71.00	0	0	78.16	69.46	43.00	0	0	59.39	43.82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.748										0.000	
+20	Tetracosane 	Target	0	57.00	23.258	23.180	23.285	2.220	154572	69738	0.00000	Auto	98	23.240	Linear	0	0	0	0	0	0	78.87	75.10	0.00	95	71.00	0	0	78.87	75.10	43.00	0	0	59.95	46.49	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.875										0.000	
+21	Pentacosane 	Target	0	57.00	23.957	23.925	23.975	1.600	116564	72946	0.00000	Auto	105	23.935	Linear	0	0	0	0	0	0	78.36	73.84	0.00	96	71.00	0	0	78.36	73.84	43.00	0	0	59.80	43.43	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.844										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\Alkanes_0.01_3uL_220812_8122022_01.qgd
+Output Date	10/23/2023
+Output Time	2:09:32 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																															0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	4.711	4.675	4.750	1.690	17208	10200	0.00000	Auto	13	4.855	Linear	0	0	0	0	0	0	54.30	24.26	0.00	80	85.00	0	0	54.30	24.26	57.00	0	0	45.45	63.04	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.056										0.000	
+4	Nonane 	Target	0	57.00	6.510	6.480	6.570	2.360	13523	5733	0.00000	Auto	15	6.620	Linear	0	0	0	0	0	0	94.11	110.03	0.00	87	43.00	0	0	94.11	110.03	85.00	0	0	37.38	35.81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.570										0.000	
+5	Decane	Target	0	57.00	8.277	8.245	8.310	1.540	97214	63316	0.00000	Auto	18	8.365	Linear	0	0	0	0	0	0	76.53	87.32	0.00	97	43.00	0	0	76.53	87.32	71.00	0	0	40.61	43.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.051										0.000	
+6	Undecane 	Target	0	57.00	10.013	9.980	10.050	1.510	93797	62201	0.00000	Auto	23	10.015	Linear	0	0	0	0	0	0	69.23	62.25	0.00	69	43.00	0	0	69.23	62.25	71.00	0	0	51.26	16.07	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.015										0.000	
+7	Dodecane 	Target	0	57.00	11.587	11.550	11.625	1.540	76413	49708	0.00000	Auto	26	11.555	Linear	0	0	0	0	0	0	65.29	94.26	0.00	69	43.00	0	0	65.29	94.26	71.00	0	0	59.10	53.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.034										0.000	
+8	Tridecane 	Target	0	57.00	12.986	12.970	13.035	1.630	93127	57210	0.00000	Auto	28	13.000	Linear	0	0	0	0	0	0	64.53	99.35	0.00	87	71.00	0	0	64.53	99.35	43.00	0	0	62.41	84.98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.859										0.000	
+9	Tetradecane 	Target	0	57.00	14.303	14.250	14.410	1.850	2615953	1412513	0.00000	Auto	32	14.355	Linear	0	0	0	0	0	0	66.81	71.58	0.00	98	71.00	0	0	66.81	71.58	43.00	0	0	59.29	71.29	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.245										0.000	
+10	Pentadecane 	Target	0	57.00	15.587	15.520	15.650	1.740	3266109	1877319	0.00000	Auto	36	15.635	Linear	0	0	0	0	0	0	69.21	73.28	0.00	98	71.00	0	0	69.21	73.28	43.00	0	0	56.54	67.18	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.901										0.000	
+11	Hexadecane 	Target	0	57.00	16.800	16.740	16.865	1.650	4032126	2448692	0.00000	Auto	40	16.855	Linear	0	0	0	0	0	0	70.23	72.92	0.00	93	71.00	0	0	70.23	72.92	43.00	0	0	54.07	63.71	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.843										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	17.949	17.895	18.000	1.720	4404373	2563113	0.00000	Auto	50	17.935	Linear	0	0	0	0	0	0	74.25	74.43	0.00	99	71.00	0	0	74.25	74.43	43.00	0	0	63.70	61.73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.812										0.000	
+14	Octadecane 	Target	0	57.00	19.038	18.975	19.155	1.770	4362212	2469757	0.00000	Auto	55	19.025	Linear	0	0	0	0	0	0	75.24	76.49	0.00	99	71.00	0	0	75.24	76.49	43.00	0	0	62.49	60.37	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.831										0.000	
+15	Nonadecane 	Target	0	57.00	19.907	19.840	20.015	1.440	3980366	2758113	0.00000	Auto	59	19.895	Linear	0	0	0	0	0	0	76.67	77.00	0.00	98	71.00	0	0	76.67	77.00	43.00	0	0	61.39	57.30	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.862										0.000	
+16	Eicosane 	Target	0	57.00	20.571	20.530	20.650	1.400	3400029	2432319	0.00000	Auto	65	20.560	Linear	0	0	0	0	0	0	78.25	78.21	0.00	99	71.00	0	0	78.25	78.21	43.00	0	0	61.38	56.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.116										0.000	
+17	Heneicosane 	Target	0	57.00	21.740	21.650	21.785	5.890	746638	126831	0.00000	Auto	69	21.595	Linear	0	0	0	0	0	0	78.51	84.55	0.00	96	71.00	0	0	78.51	84.55	43.00	0	0	61.78	59.82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.783										0.000	
+18	Docosane 	Target	0	57.00	21.975	21.910	22.055	6.060	680617	112282	0.00000	Auto	77	22.095	Linear	0	0	0	0	0	0	77.34	85.81	0.00	96	71.00	0	0	77.34	85.81	43.00	0	0	60.78	58.14	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.989										0.000	
+19	Tricosane 	Target	0	57.00	22.613	22.550	22.635	4.190	107036	25570	0.00000	Auto	79	22.635	Linear	0	0	0	0	0	0	78.16	85.55	0.00	95	71.00	0	0	78.16	85.55	43.00	0	0	59.39	62.04	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.680										0.000	
+20	Tetracosane 	Target	0	57.00	23.124	23.085	23.185	2.910	7525	2583	0.00000	Auto	86	23.240	Linear	0	0	0	0	0	0	78.87	80.53	0.00	90	71.00	0	0	78.87	80.53	43.00	0	0	59.95	54.36	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.212										0.000	
+21	Pentacosane 	Target	0	57.00	23.955	23.900	23.970	3.060	4563	1492	0.00000	Auto	90	23.935	Linear	0	0	0	0	0	0	78.36	83.69	0.00	68	71.00	0	0	78.36	83.69	43.00	0	0	59.80	42.04	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.626										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\ALK3uL0.01_8152023_11.qgd
+Output Date	10/23/2023
+Output Time	2:09:33 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.444	2.365	2.510	3.070	46999	15313	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	50.61	0.00	95	69.00	0	0	46.18	50.61	41.00	0	0	42.29	33.08	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.791										0.000	
+2	Heptane	Target	0	43.00	3.178	3.110	3.250	2.700	214384	79505	0.00000	Auto	6	3.320	Linear	0	0	0	0	0	0	64.94	68.42	0.00	98	71.00	0	0	64.94	68.42	57.00	0	0	55.02	59.76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.890										0.000	
+3	Octane 	Target	0	43.00	4.721	4.665	4.830	1.930	592075	306043	0.00000	Auto	13	4.855	Linear	0	0	0	0	0	0	54.30	53.01	0.00	98	85.00	0	0	54.30	53.01	57.00	0	0	45.45	45.78	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.002										0.000	
+4	Nonane 	Target	0	57.00	6.505	6.460	6.595	1.620	638085	394897	0.00000	Auto	16	6.620	Linear	0	0	0	0	0	0	94.11	96.98	0.00	99	43.00	0	0	94.11	96.98	85.00	0	0	37.38	38.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.127										0.000	
+5	Decane	Target	0	57.00	8.265	8.155	8.300	1.540	610598	396918	0.00000	Auto	20	8.365	Linear	0	0	0	0	0	0	76.53	79.16	0.00	98	43.00	0	0	76.53	79.16	71.00	0	0	40.61	43.84	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.041										0.000	
+6	Undecane 	Target	0	57.00	9.995	9.965	10.045	1.670	73118	43680	0.00000	Auto	26	10.015	Linear	0	0	0	0	0	0	69.23	53.21	0.00	68	43.00	0	0	69.23	53.21	71.00	0	0	51.26	12.98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.012										0.000	
+7	Dodecane 	Target	0	57.00	11.563	11.520	11.610	1.630	40671	25006	0.00000	Auto	30	11.555	Linear	0	0	0	0	0	0	65.29	83.17	0.00	71	43.00	0	0	65.29	83.17	71.00	0	0	59.10	56.92	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.100										0.000	
+8	Tridecane 	Target	0	57.00	13.030	13.000	13.060	1.570	5380	3430	0.00000	Auto	34	13.000	Linear	0	0	0	0	0	0	64.53	55.36	0.00	65	71.00	0	0	64.53	55.36	43.00	0	0	62.41	91.60	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.915										0.000	
+9	Tetradecane 	Target	0	57.00	14.300	14.290	14.330	1.100	36256	32848	0.00000	Auto	36	14.355	Linear	0	0	0	0	0	0	66.81	62.35	0.00	92	71.00	0	0	66.81	62.35	43.00	0	0	59.29	61.58	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.715										0.000	
+10	Pentadecane 	Target	0	57.00	15.547	15.510	15.600	1.880	228243	121327	0.00000	Auto	39	15.635	Linear	0	0	0	0	0	0	69.21	74.16	0.00	98	71.00	0	0	69.21	74.16	43.00	0	0	56.54	58.06	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.127										0.000	
+11	Hexadecane 	Target	0	57.00	16.930	16.895	16.990	2.100	21151	10053	0.00000	Auto	44	16.855	Linear	0	0	0	0	0	0	70.23	44.51	0.00	58	71.00	0	0	70.23	44.51	43.00	0	0	54.07	86.89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.393										0.000	
+12	n-Hexane	Target	0	57.00	2.196	2.015	2.530	3.280	9138189	2786967	0.00000	Auto	47	2.340	Linear	0	0	0	0	0	0	94.31	54.63	0.00	88	56.00	0	0	94.31	54.63	41.00	0	0	93.38	59.28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.821										0.000	
+13	Heptadecane 	Target	0	57.00	17.900	17.865	18.020	1.810	235914	130429	0.00000	Auto	52	17.935	Linear	0	0	0	0	0	0	74.25	80.87	0.00	96	71.00	0	0	74.25	80.87	43.00	0	0	63.70	59.51	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.231										0.000	
+14	Octadecane 	Target	0	57.00	18.991	18.955	19.065	1.680	157355	93449	0.00000	Auto	56	19.025	Linear	0	0	0	0	0	0	75.24	80.64	0.00	97	71.00	0	0	75.24	80.64	43.00	0	0	62.49	52.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.219										0.000	
+15	Nonadecane 	Target	0	57.00	19.873	19.845	19.895	1.660	104333	62683	0.00000	Auto	60	19.895	Linear	0	0	0	0	0	0	76.67	77.79	0.00	95	71.00	0	0	76.67	77.79	43.00	0	0	61.39	48.82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.997										0.000	
+16	Eicosane 	Target	0	57.00	20.575	20.565	20.655	3.710	52925	14284	0.00000	Auto	65	20.560	Linear	0	0	0	0	0	0	78.25	116.81	0.00	78	71.00	0	0	78.25	116.81	43.00	0	0	61.38	56.03	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	4.500										0.000	
+17	Heneicosane 	Target	0	57.00	21.571	21.525	21.600	2.110	138649	65811	0.00000	Auto	72	21.595	Linear	0	0	0	0	0	0	78.51	89.21	0.00	87	71.00	0	0	78.51	89.21	43.00	0	0	61.78	43.90	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.746										0.000	
+18	Docosane 	Target	0	57.00	22.068	22.035	22.095	1.700	227725	133933	0.00000	Auto	77	22.095	Linear	0	0	0	0	0	0	77.34	89.13	0.00	94	71.00	0	0	77.34	89.13	43.00	0	0	60.78	46.39	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.909										0.000	
+19	Tricosane 	Target	0	57.00	22.608	22.565	22.655	1.570	1327740	846298	0.00000	Auto	81	22.635	Linear	0	0	0	0	0	0	78.16	89.11	0.00	96	71.00	0	0	78.16	89.11	43.00	0	0	59.39	45.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.048										0.000	
+20	Tetracosane 	Target	0	57.00	23.211	23.160	23.285	2.130	5501117	2583240	0.00000	Auto	87	23.240	Linear	0	0	0	0	0	0	78.87	99.80	0.00	93	71.00	0	0	78.87	99.80	43.00	0	0	59.95	45.26	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.011										0.000	
+21	Pentacosane 	Target	0	57.00	23.903	23.855	23.975	2.320	4582506	1975876	0.00000	Auto	94	23.935	Linear	0	0	0	0	0	0	78.36	97.19	0.00	93	71.00	0	0	78.36	97.19	43.00	0	0	59.80	43.73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.057										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\ALK3uL0.01_7252019_16.qgd
+Output Date	10/23/2023
+Output Time	2:09:33 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																	0.00														0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	4.743	4.705	4.790	1.830	6881	3755	0.00000	Auto	14	4.855	Linear	0	0	0	0	0	0	54.30	19.19	0.00	78	85.00	0	0	54.30	19.19	57.00	0	0	45.45	61.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.985										0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																	0.00														0.000	
+5	Decane	Target	0	57.00	8.317	8.280	8.335	1.740	1407	809	0.00000	Auto	23	8.365	Linear	0	0	0	0	0	0	76.53	61.77	0.00	73	43.00	0	0	76.53	61.77	71.00	0	0	40.61	48.91	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.773										0.000	
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																	0.00														0.000	
+7	Dodecane 	Target	0	57.00	11.535	11.500	11.560	1.560	3536	2265	0.00000	Auto	32	11.555	Linear	0	0	0	0	0	0	65.29	62.77	0.00	81	43.00	0	0	65.29	62.77	71.00	0	0	59.10	71.96	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.000										0.000	
+8	Tridecane 	Target	0	57.00	12.982	12.960	13.020	1.790	5249	2930	0.00000	Auto	38	13.000	Linear	0	0	0	0	0	0	64.53	68.26	0.00	49	71.00	0	0	64.53	68.26	43.00	0	0	62.41	68.26	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.320										0.000	
+9	Tetradecane 	Target	0	57.00	14.339	14.255	14.375	1.630	10110	6204	0.00000	Auto	43	14.355	Linear	0	0	0	0	0	0	66.81	91.55	0.00	91	71.00	0	0	66.81	91.55	43.00	0	0	59.29	79.17	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.006										0.000	
+10	Pentadecane 	Target	0	57.00	15.622	15.600	15.655	1.380	3948	2862	0.00000	Auto	48	15.635	Linear	0	0	0	0	0	0	69.21	76.32	0.00	84	71.00	0	0	69.21	76.32	43.00	0	0	56.54	69.98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.055										0.000	
+11	Hexadecane 	Target	0	57.00	16.834	16.800	16.865	1.700	6999	4111	0.00000	Auto	52	16.855	Linear	0	0	0	0	0	0	70.23	99.11	0.00	84	71.00	0	0	70.23	99.11	43.00	0	0	54.07	83.90	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.961										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	17.905	17.885	17.965	2.170	3947	1817	0.00000	Auto	62	17.935	Linear	0	0	0	0	0	0	74.25	48.39	0.00	63	71.00	0	0	74.25	48.39	43.00	0	0	63.70	97.47	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.543										0.000	
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																	0.00														0.000	
+15	Nonadecane 	Target	0	57.00	19.932	19.900	19.965	1.320	78083	59324	0.00000	Auto	73	19.895	Linear	0	0	0	0	0	0	76.67	95.55	0.00	95	71.00	0	0	76.67	95.55	43.00	0	0	61.39	59.72	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.949										0.000	
+16	Eicosane 	Target	0	57.00	20.600	20.580	20.630	1.160	122808	106238	0.00000	Auto	80	20.560	Linear	0	0	0	0	0	0	78.25	96.81	0.00	94	71.00	0	0	78.25	96.81	43.00	0	0	61.38	60.62	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.015										0.000	
+17	Heneicosane 	Target	0	57.00	21.639	21.600	21.710	1.330	494096	371207	0.00000	Auto	84	21.595	Linear	0	0	0	0	0	0	78.51	104.68	0.00	94	71.00	0	0	78.51	104.68	43.00	0	0	61.78	59.98	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.038										0.000	
+18	Docosane 	Target	0	57.00	22.145	22.110	22.225	1.440	1243895	863864	0.00000	Auto	88	22.095	Linear	0	0	0	0	0	0	77.34	112.69	0.00	93	71.00	0	0	77.34	112.69	43.00	0	0	60.78	62.81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.036										0.000	
+19	Tricosane 	Target	0	57.00	22.686	22.640	22.815	1.700	931712	549405	0.00000	Auto	94	22.635	Linear	0	0	0	0	0	0	78.16	108.13	0.00	94	71.00	0	0	78.16	108.13	43.00	0	0	59.39	59.74	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.398										0.000	
+20	Tetracosane 	Target	0	57.00	23.295	23.245	23.450	2.130	1369866	642573	0.00000	Auto	99	23.240	Linear	0	0	0	0	0	0	78.87	110.40	0.00	94	71.00	0	0	78.87	110.40	43.00	0	0	59.95	59.93	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.706										0.000	
+21	Pentacosane 	Target	0	57.00	23.902	23.880	23.940	2.020	9845	4877	0.00000	Auto	105	23.935	Linear	0	0	0	0	0	0	78.36	70.29	0.00	84	71.00	0	0	78.36	70.29	43.00	0	0	59.80	47.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.223										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\ALK3uL0.01_7252019_15.qgd
+Output Date	10/23/2023
+Output Time	2:09:34 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.403	2.375	2.455	2.640	31172	11827	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	68.84	0.00	91	69.00	0	0	46.18	68.84	41.00	0	0	42.29	51.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.293										0.000	
+2	Heptane	Target	0	43.00	3.159	3.070	3.240	3.450	348080	100891	0.00000	Auto	6	3.320	Linear	0	0	0	0	0	0	64.94	58.47	0.00	88	71.00	0	0	64.94	58.47	57.00	0	0	55.02	50.81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.983										0.000	
+3	Octane 	Target	0	43.00	4.738	4.700	4.805	1.850	1212292	656673	0.00000	Auto	11	4.855	Linear	0	0	0	0	0	0	54.30	21.87	0.00	80	85.00	0	0	54.30	21.87	57.00	0	0	45.45	59.10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.078										0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																	0.00														0.000	
+5	Decane	Target	0	57.00	8.322	8.295	8.350	1.470	361456	246484	0.00000	Auto	20	8.365	Linear	0	0	0	0	0	0	76.53	105.03	0.00	95	43.00	0	0	76.53	105.03	71.00	0	0	40.61	58.46	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.027										0.000	
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																	0.00														0.000	
+7	Dodecane 	Target	0	57.00	11.536	11.505	11.580	1.470	318253	216413	0.00000	Auto	31	11.555	Linear	0	0	0	0	0	0	65.29	88.30	0.00	93	43.00	0	0	65.29	88.30	71.00	0	0	59.10	83.55	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.957										0.000	
+8	Tridecane 	Target	0	57.00	12.983	12.950	13.015	1.500	253621	168972	0.00000	Auto	37	13.000	Linear	0	0	0	0	0	0	64.53	87.97	0.00	94	71.00	0	0	64.53	87.97	43.00	0	0	62.41	82.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.047										0.000	
+9	Tetradecane 	Target	0	57.00	14.343	14.310	14.380	1.570	240833	153059	0.00000	Auto	43	14.355	Linear	0	0	0	0	0	0	66.81	94.56	0.00	94	71.00	0	0	66.81	94.56	43.00	0	0	59.29	78.74	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.025										0.000	
+10	Pentadecane 	Target	0	57.00	15.623	15.570	15.665	1.770	213170	120283	0.00000	Auto	47	15.635	Linear	0	0	0	0	0	0	69.21	97.56	0.00	94	71.00	0	0	69.21	97.56	43.00	0	0	56.54	75.09	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.813										0.000	
+11	Hexadecane 	Target	0	57.00	16.834	16.795	16.875	1.580	161433	102431	0.00000	Auto	52	16.855	Linear	0	0	0	0	0	0	70.23	96.53	0.00	89	71.00	0	0	70.23	96.53	43.00	0	0	54.07	74.78	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.107										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	17.983	17.950	18.020	1.620	129904	80289	0.00000	Auto	62	17.935	Linear	0	0	0	0	0	0	74.25	103.84	0.00	92	71.00	0	0	74.25	103.84	43.00	0	0	63.70	80.49	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.016										0.000	
+14	Octadecane 	Target	0	57.00	19.115	19.075	19.245	8.020	87291	10884	0.00000	Auto	68	19.025	Linear	0	0	0	0	0	0	75.24	95.12	0.00	62	71.00	0	0	75.24	95.12	43.00	0	0	62.49	94.49	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.125										0.000	
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																	0.00														0.000	
+16	Eicosane 	Target	0	57.00	20.601	20.580	20.645	1.270	55438	43497	0.00000	Auto	79	20.560	Linear	0	0	0	0	0	0	78.25	98.89	0.00	92	71.00	0	0	78.25	98.89	43.00	0	0	61.38	58.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.507										0.000	
+17	Heneicosane 	Target	0	57.00	21.653	21.615	21.720	1.340	444036	330522	0.00000	Auto	83	21.595	Linear	0	0	0	0	0	0	78.51	103.92	0.00	94	71.00	0	0	78.51	103.92	43.00	0	0	61.78	59.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.053										0.000	
+18	Docosane 	Target	0	57.00	22.160	22.125	22.245	1.470	1460019	993426	0.00000	Auto	87	22.095	Linear	0	0	0	0	0	0	77.34	111.99	0.00	93	71.00	0	0	77.34	111.99	43.00	0	0	60.78	63.11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.047										0.000	
+19	Tricosane 	Target	0	57.00	22.699	22.660	22.780	1.640	636719	387656	0.00000	Auto	93	22.635	Linear	0	0	0	0	0	0	78.16	106.17	0.00	95	71.00	0	0	78.16	106.17	43.00	0	0	59.39	58.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.421										0.000	
+20	Tetracosane 	Target	0	57.00	23.203	23.185	23.240	1.900	10771	5679	0.00000	Auto	97	23.240	Linear	0	0	0	0	0	0	78.87	66.99	0.00	66	71.00	0	0	78.87	66.99	43.00	0	0	59.95	42.32	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.407										0.000	
+21	Pentacosane 	Target	0	57.00	23.918	23.860	23.950	2.590	14116	5447	0.00000	Auto	104	23.935	Linear	0	0	0	0	0	0	78.36	91.58	0.00	86	71.00	0	0	78.36	91.58	43.00	0	0	59.80	52.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.770										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\Markes Ipo 1\ALK3uL0.01_7232019_11.qgd
+Output Date	10/23/2023
+Output Time	2:09:35 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.468	2.450	2.525	2.030	21039	10378	0.00000	Auto	4	2.570	Linear	0	0	0	0	0	0	46.18	54.76	0.00	92	69.00	0	0	46.18	54.76	41.00	0	0	42.29	43.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.636										0.000	
+2	Heptane	Target	0	43.00	3.266	3.225	3.330	2.020	106537	52624	0.00000	Auto	7	3.320	Linear	0	0	0	0	0	0	64.94	66.79	0.00	96	71.00	0	0	64.94	66.79	57.00	0	0	55.02	41.47	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.982										0.000	
+3	Octane 	Target	0	43.00	4.896	4.850	4.955	1.660	195537	117684	0.00000	Auto	14	4.855	Linear	0	0	0	0	0	0	54.30	51.68	0.00	97	85.00	0	0	54.30	51.68	57.00	0	0	45.45	38.31	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.025										0.000	
+4	Nonane 	Target	0	57.00	6.730	6.690	6.815	1.630	157834	96652	0.00000	Auto	17	6.620	Linear	0	0	0	0	0	0	94.11	121.38	0.00	96	43.00	0	0	94.11	121.38	85.00	0	0	37.38	46.59	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.114										0.000	
+5	Decane	Target	0	57.00	8.513	8.410	8.550	1.640	187129	114411	0.00000	Auto	22	8.365	Linear	0	0	0	0	0	0	76.53	99.23	0.00	92	43.00	0	0	76.53	99.23	71.00	0	0	40.61	52.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.972										0.000	
+6	Undecane 	Target	0	57.00	10.178	10.145	10.220	1.540	163049	105547	0.00000	Auto	27	10.015	Linear	0	0	0	0	0	0	69.23	90.83	0.00	92	43.00	0	0	69.23	90.83	71.00	0	0	51.26	75.50	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.017										0.000	
+7	Dodecane 	Target	0	57.00	Not Identified									11.555	Linear	0	0	0	0																																	0.00														0.000	
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																	0.00														0.000	
+9	Tetradecane 	Target	0	57.00	Not Identified									14.355	Linear	0	0	0	0																																															0.000	
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																	0.00														0.000	
+11	Hexadecane 	Target	0	57.00	17.019	16.985	17.060	1.570	95987	61223	0.00000	Auto	52	16.855	Linear	0	0	0	0	0	0	70.23	93.47	0.00	89	71.00	0	0	70.23	93.47	43.00	0	0	54.07	73.59	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.017										0.000	
+12	n-Hexane	Target	0	57.00	2.206	2.130	2.550	2.490	5731010	2306129	0.00000	Auto	55	2.340	Linear	0	0	0	0	0	0	94.31	56.11	0.00	92	56.00	0	0	94.31	56.11	41.00	0	0	93.38	73.36	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.986										0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																	0.00														0.000	
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																	0.00														0.000	
+15	Nonadecane 	Target	0	57.00	19.937	19.905	19.975	2.240	82486	36805	0.00000	Auto	69	19.895	Linear	0	0	0	0	0	0	76.67	71.51	0.00	75	71.00	0	0	76.67	71.51	43.00	0	0	61.39	87.94	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.242										0.000	
+16	Eicosane 	Target	0	57.00	20.656	20.520	20.700	2.750	691833	251935	0.00000	Auto	76	20.560	Linear	0	0	0	0	0	0	78.25	103.30	0.00	90	71.00	0	0	78.25	103.30	43.00	0	0	61.38	54.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.924										0.000	
+17	Heneicosane 	Target	0	57.00	21.576	21.545	21.635	2.770	80893	29226	0.00000	Auto	80	21.595	Linear	0	0	0	0	0	0	78.51	74.41	0.00	54	71.00	0	0	78.51	74.41	43.00	0	0	61.78	96.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.429										0.000	
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																															0.000	
+19	Tricosane 	Target	0	57.00	22.626	22.615	22.650	1.110	15323	13839	0.00000	Auto	91	22.635	Linear	0	0	0	0	0	0	78.16	63.86	0.00	86	71.00	0	0	78.16	63.86	43.00	0	0	59.39	60.35	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.315										0.000	
+20	Tetracosane 	Target	0	57.00	23.225	23.175	23.260	2.120	51653	24400	0.00000	Auto	96	23.240	Linear	0	0	0	0	0	0	78.87	84.14	0.00	90	71.00	0	0	78.87	84.14	43.00	0	0	59.95	60.25	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.880										0.000	
+21	Pentacosane 	Target	0	57.00	23.922	23.865	23.975	2.310	207039	89644	0.00000	Auto	103	23.935	Linear	0	0	0	0	0	0	78.36	89.71	0.00	89	71.00	0	0	78.36	89.71	43.00	0	0	59.80	58.60	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.949										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\VM Micro 5Cmin_upto80C and 33_300mz\Alk_Lad_rep2_972023_04.qgd
+Output Date	10/23/2023
+Output Time	2:09:35 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.563	2.540	2.600	1.590	10276	6458	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	48.80	0.00	70	69.00	0	0	46.18	48.80	41.00	0	0	42.29	66.52	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.165										0.000	
+2	Heptane	Target	0	43.00	3.154	3.070	3.220	3.230	156739	48591	0.00000	Auto	6	3.320	Linear	0	0	0	0	0	0	64.94	58.12	0.00	79	71.00	0	0	64.94	58.12	57.00	0	0	55.02	77.58	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.895										0.000	
+3	Octane 	Target	0	43.00	Not Identified									4.855	Linear	0	0	0	0																																	0.00														0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																	0.00														0.000	
+5	Decane	Target	0	57.00	Not Identified									8.365	Linear	0	0	0	0																																															0.000	
+6	Undecane 	Target	0	57.00	10.173	10.140	10.215	2.160	15541	7207	0.00000	Auto	18	10.015	Linear	0	0	0	0	0	0	69.23	47.10	0.00	67	43.00	0	0	69.23	47.10	71.00	0	0	51.26	19.14	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.050										0.000	
+7	Dodecane 	Target	0	57.00	Not Identified									11.555	Linear	0	0	0	0																																	0.00														0.000	
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																	0.00														0.000	
+9	Tetradecane 	Target	0	57.00	Not Identified									14.355	Linear	0	0	0	0																																	0.00														0.000	
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																															0.000	
+11	Hexadecane 	Target	0	57.00	16.883	16.845	16.920	1.870	29887	15984	0.00000	Auto	34	16.855	Linear	0	0	0	0	0	0	70.23	42.22	0.00	60	71.00	0	0	70.23	42.22	43.00	0	0	54.07	84.27	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.958										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																															0.000	
+14	Octadecane 	Target	0	57.00	19.163	19.125	19.180	1.940	67365	34642	0.00000	Auto	44	19.025	Linear	0	0	0	0	0	0	75.24	49.31	0.00	39	71.00	0	0	75.24	49.31	43.00	0	0	62.49	88.63	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.789										0.000	
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																	0.00														0.000	
+16	Eicosane 	Target	0	57.00	20.635	20.620	20.690	1.560	3009	1925	0.00000	Auto	52	20.560	Linear	0	0	0	0	0	0	78.25	42.45	0.00	66	71.00	0	0	78.25	42.45	43.00	0	0	61.38	77.73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.532										0.000	
+17	Heneicosane 	Target	0	57.00	21.646	21.615	21.695	1.790	53300	29765	0.00000	Auto	57	21.595	Linear	0	0	0	0	0	0	78.51	50.72	0.00	70	71.00	0	0	78.51	50.72	43.00	0	0	61.78	88.40	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.283										0.000	
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																	0.00														0.000	
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																	0.00														0.000	
+20	Tetracosane 	Target	0	57.00	23.302	23.275	23.315	1.460	4529	3097	0.00000	Auto	71	23.240	Linear	0	0	0	0	0	0	78.87	54.42	0.00	54	71.00	0	0	78.87	54.42	43.00	0	0	59.95	28.35	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.758										0.000	
+21	Pentacosane 	Target	0	57.00	23.913	23.820	23.975	3.930	563298	143458	0.00000	Auto	77	23.935	Linear	0	0	0	0	0	0	78.36	83.14	0.00	92	71.00	0	0	78.36	83.14	43.00	0	0	59.80	47.86	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.842										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\VM Micro 5Cmin_upto80C and 33_300mz\Alk_Lad_rep1_972023_03.qgd
+Output Date	10/23/2023
+Output Time	2:09:36 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.676	2.615	2.750	3.120	191561	61493	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	29.43	0.00	80	69.00	0	0	46.18	29.43	41.00	0	0	42.29	53.28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.034										0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																	0.00														0.000	
+3	Octane 	Target	0	43.00	Not Identified									4.855	Linear	0	0	0	0																																															0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																																
+5	Decane	Target	0	57.00	Not Identified									8.365	Linear	0	0	0	0																																															0.000	
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																	0.00														0.000	
+7	Dodecane 	Target	0	57.00	Not Identified									11.555	Linear	0	0	0	0																																	0.00														0.000	
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																	0.00														0.000	
+9	Tetradecane 	Target	0	57.00	Not Identified									14.355	Linear	0	0	0	0																																															0.000	
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																															0.000	
+11	Hexadecane 	Target	0	57.00	16.810	16.800	16.845	1.200	7663	6407	0.00000	Auto	27	16.855	Linear	0	0	0	0	0	0	70.23	31.66	0.00	57	71.00	0	0	70.23	31.66	43.00	0	0	54.07	54.33	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.926										0.000	
+12	n-Hexane	Target	0	57.00	2.323	2.285	2.370	1.750	977227	556954	0.00000	Auto	31	2.340	Linear	0	0	0	0	0	0	94.31	116.60	0.00	89	56.00	0	0	94.31	116.60	41.00	0	0	93.38	85.25	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.024										0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																															0.000	
+14	Octadecane 	Target	0	57.00	19.170	19.140	19.185	1.810	52357	28926	0.00000	Auto	37	19.025	Linear	0	0	0	0	0	0	75.24	51.72	0.00	30	71.00	0	0	75.24	51.72	43.00	0	0	62.49	61.56	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.805										0.000	
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																	0.00														0.000	
+16	Eicosane 	Target	0	57.00	20.453	20.420	20.490	1.810	17101	9424	0.00000	Auto	44	20.560	Linear	0	0	0	0	0	0	78.25	43.10	0.00	66	71.00	0	0	78.25	43.10	43.00	0	0	61.38	85.17	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.096										0.000	
+17	Heneicosane 	Target	0	57.00	21.658	21.620	21.710	1.910	57641	30126	0.00000	Auto	48	21.595	Linear	0	0	0	0	0	0	78.51	49.02	0.00	70	71.00	0	0	78.51	49.02	43.00	0	0	61.78	88.29	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.285										0.000	
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																	0.00														0.000	
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																	0.00														0.000	
+20	Tetracosane 	Target	0	57.00	23.181	23.160	23.220	1.890	25623	13558	0.00000	Auto	64	23.240	Linear	0	0	0	0	0	0	78.87	77.63	0.00	49	71.00	0	0	78.87	77.63	43.00	0	0	59.95	75.08	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.304										0.000	
+21	Pentacosane 	Target	0	57.00	23.916	23.815	23.975	3.980	457655	114919	0.00000	Auto	69	23.935	Linear	0	0	0	0	0	0	78.36	79.23	0.00	87	71.00	0	0	78.36	79.23	43.00	0	0	59.80	49.37	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.836										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\DB5 10deg method\Alkanes3uL0.01_08122018.qgd
+Output Date	10/23/2023
+Output Time	2:09:36 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																															0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																															0.000	
+3	Octane 	Target	0	43.00	4.704	4.670	4.755	1.650	465535	281586	0.00000	Auto	6	4.855	Linear	0	0	0	0	0	0	54.30	57.82	0.00	98	85.00	0	0	54.30	57.82	57.00	0	0	45.45	50.43	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.091										0.000	
+4	Nonane 	Target	0	57.00	6.515	6.485	6.555	1.530	546812	358440	0.00000	Auto	7	6.620	Linear	0	0	0	0	0	0	94.11	82.09	0.00	98	43.00	0	0	94.11	82.09	85.00	0	0	37.38	35.15	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.043										0.000	
+5	Decane	Target	0	57.00	8.352	8.330	8.385	1.690	10940	6491	0.00000	Auto	9	8.365	Linear	0	0	0	0	0	0	76.53	116.47	0.00	66	43.00	0	0	76.53	116.47	71.00	0	0	40.61	10.29	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.112										0.000	
+6	Undecane 	Target	0	57.00	10.040	9.990	10.070	1.490	40119	27012	0.00000	Auto	12	10.015	Linear	0	0	0	0	0	0	69.23	46.76	0.00	70	43.00	0	0	69.23	46.76	71.00	0	0	51.26	13.43	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.040										0.000	
+7	Dodecane 	Target	0	57.00	11.504	11.465	11.545	1.490	236858	159108	0.00000	Auto	14	11.555	Linear	0	0	0	0	0	0	65.29	56.05	0.00	97	43.00	0	0	65.29	56.05	71.00	0	0	59.10	51.26	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.015										0.000	
+8	Tridecane 	Target	0	57.00	12.950	12.925	12.980	1.410	205005	145785	0.00000	Auto	16	13.000	Linear	0	0	0	0	0	0	64.53	55.02	0.00	97	71.00	0	0	64.53	55.02	43.00	0	0	62.41	54.04	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.045										0.000	
+9	Tetradecane 	Target	0	57.00	14.309	14.280	14.340	1.500	237176	158392	0.00000	Auto	17	14.355	Linear	0	0	0	0	0	0	66.81	57.65	0.00	98	71.00	0	0	66.81	57.65	43.00	0	0	59.29	51.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.029										0.000	
+10	Pentadecane 	Target	0	57.00	15.587	15.550	15.630	1.580	320383	202221	0.00000	Auto	18	15.635	Linear	0	0	0	0	0	0	69.21	59.56	0.00	98	71.00	0	0	69.21	59.56	43.00	0	0	56.54	49.20	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.012										0.000	
+11	Hexadecane 	Target	0	57.00	16.798	16.765	16.840	1.680	411885	245813	0.00000	Auto	20	16.855	Linear	0	0	0	0	0	0	70.23	60.23	0.00	93	71.00	0	0	70.23	60.23	43.00	0	0	54.07	47.35	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.117										0.000	
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																	0.00														0.000	
+13	Heptadecane 	Target	0	57.00	17.975	17.930	18.035	3.300	142582	43263	0.00000	Auto	24	17.935	Linear	0	0	0	0	0	0	74.25	59.64	0.00	95	71.00	0	0	74.25	59.64	43.00	0	0	63.70	46.21	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.179										0.000	
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																															0.000	
+15	Nonadecane 	Target	0	57.00	19.911	19.870	19.960	2.610	29778	11428	0.00000	Auto	28	19.895	Linear	0	0	0	0	0	0	76.67	43.41	0.00	68	71.00	0	0	76.67	43.41	43.00	0	0	61.39	93.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.150										0.000	
+16	Eicosane 	Target	0	57.00	Not Identified									20.560	Linear	0	0	0	0																																															0.000	
+17	Heneicosane 	Target	0	57.00	Not Identified									21.595	Linear	0	0	0	0																																															0.000	
+18	Docosane 	Target	0	57.00	22.009	21.980	22.065	1.950	51171	26218	0.00000	Auto	37	22.095	Linear	0	0	0	0	0	0	77.34	66.91	0.00	93	71.00	0	0	77.34	66.91	43.00	0	0	60.78	41.89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.348										0.000	
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																															0.000	
+20	Tetracosane 	Target	0	57.00	Not Identified									23.240	Linear	0	0	0	0																																															0.000	
+21	Pentacosane 	Target	0	57.00	23.781	23.745	23.840	1.890	331802	175893	0.00000	Auto	42	23.935	Linear	0	0	0	0	0	0	78.36	67.21	0.00	95	71.00	0	0	78.36	67.21	43.00	0	0	59.80	40.95	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.179										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\DB5 10deg method\Alkanes3uL0.01Tendeg_08112018.qgd
+Output Date	10/23/2023
+Output Time	2:09:36 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.564	2.545	2.600	1.340	26335	19680	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	39.64	0.00	96	69.00	0	0	46.18	39.64	41.00	0	0	42.29	32.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.234										0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																															0.000	
+3	Octane 	Target	0	43.00	4.704	4.595	4.775	1.720	488542	284481	0.00000	Auto	9	4.855	Linear	0	0	0	0	0	0	54.30	58.25	0.00	98	85.00	0	0	54.30	58.25	57.00	0	0	45.45	51.34	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.090										0.000	
+4	Nonane 	Target	0	57.00	6.513	6.480	6.550	1.530	604136	393765	0.00000	Auto	11	6.620	Linear	0	0	0	0	0	0	94.11	84.05	0.00	98	43.00	0	0	94.11	84.05	85.00	0	0	37.38	35.72	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.034										0.000	
+5	Decane	Target	0	57.00	8.351	8.335	8.390	1.630	13580	8355	0.00000	Auto	13	8.365	Linear	0	0	0	0	0	0	76.53	107.25	0.00	67	43.00	0	0	76.53	107.25	71.00	0	0	40.61	7.83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.488										0.000	
+6	Undecane 	Target	0	57.00	9.953	9.915	9.995	1.550	825242	533735	0.00000	Auto	15	10.015	Linear	0	0	0	0	0	0	69.23	60.43	0.00	97	43.00	0	0	69.23	60.43	71.00	0	0	51.26	43.90	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.028										0.000	
+7	Dodecane 	Target	0	57.00	11.503	11.465	11.575	1.590	879233	552220	0.00000	Auto	18	11.555	Linear	0	0	0	0	0	0	65.29	57.90	0.00	98	43.00	0	0	65.29	57.90	71.00	0	0	59.10	50.86	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.026										0.000	
+8	Tridecane 	Target	0	57.00	12.949	12.905	13.005	1.610	937098	581750	0.00000	Auto	20	13.000	Linear	0	0	0	0	0	0	64.53	55.87	0.00	97	71.00	0	0	64.53	55.87	43.00	0	0	62.41	55.05	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.081										0.000	
+9	Tetradecane 	Target	0	57.00	14.307	14.265	14.380	1.800	1072811	596732	0.00000	Auto	22	14.355	Linear	0	0	0	0	0	0	66.81	58.98	0.00	98	71.00	0	0	66.81	58.98	43.00	0	0	59.29	52.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.287										0.000	
+10	Pentadecane 	Target	0	57.00	15.586	15.550	15.640	1.630	1135831	696527	0.00000	Auto	24	15.635	Linear	0	0	0	0	0	0	69.21	60.70	0.00	98	71.00	0	0	69.21	60.70	43.00	0	0	56.54	50.43	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.132										0.000	
+11	Hexadecane 	Target	0	57.00	16.799	16.760	16.870	2.040	1276509	625778	0.00000	Auto	25	16.855	Linear	0	0	0	0	0	0	70.23	61.96	0.00	93	71.00	0	0	70.23	61.96	43.00	0	0	54.07	48.41	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.438										0.000	
+12	n-Hexane	Target	0	57.00	2.324	2.290	2.465	2.260	4521921	2003410	0.00000	Auto	30	2.340	Linear	0	0	0	0	0	0	94.31	123.40	0.00	89	56.00	0	0	94.31	123.40	41.00	0	0	93.38	93.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.335										0.000	
+13	Heptadecane 	Target	0	57.00	17.976	17.920	18.130	5.840	883066	151130	0.00000	Auto	31	17.935	Linear	0	0	0	0	0	0	74.25	61.95	0.00	96	71.00	0	0	74.25	61.95	43.00	0	0	63.70	46.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	2.286										0.000	
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																																
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																	0.00														0.000	
+16	Eicosane 	Target	0	57.00	20.697	20.650	20.780	3.800	91063	23949	0.00000	Auto	35	20.560	Linear	0	0	0	0	0	0	78.25	51.95	0.00	54	71.00	0	0	78.25	51.95	43.00	0	0	61.38	83.18	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.439										0.000	
+17	Heneicosane 	Target	0	57.00	Not Identified									21.595	Linear	0	0	0	0																																															0.000	
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																															0.000	
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																															0.000	
+20	Tetracosane 	Target	0	57.00	Not Identified									23.240	Linear	0	0	0	0																																															0.000	
+21	Pentacosane 	Target	0	57.00	23.781	23.760	23.815	1.710	15346	8973	0.00000	Auto	43	23.935	Linear	0	0	0	0	0	0	78.36	63.93	0.00	83	71.00	0	0	78.36	63.93	43.00	0	0	59.80	41.13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.240										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\DB5 10deg method\Alkanes3uL0.0110deg_08172017.qgd
+Output Date	10/23/2023
+Output Time	2:09:37 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	2.584	2.555	2.620	1.610	66104	40938	0.00000	Auto	3	2.570	Linear	0	0	0	0	0	0	46.18	34.85	0.00	95	69.00	0	0	46.18	34.85	41.00	0	0	42.29	34.63	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.109										0.000	
+2	Heptane	Target	0	43.00	3.314	3.270	3.340	2.690	20558	7643	0.00000	Auto	7	3.320	Linear	0	0	0	0	0	0	64.94	68.45	0.00	87	71.00	0	0	64.94	68.45	57.00	0	0	55.02	73.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.789										0.000	
+3	Octane 	Target	0	43.00	4.831	4.805	4.865	1.800	49281	27316	0.00000	Auto	13	4.855	Linear	0	0	0	0	0	0	54.30	57.68	0.00	97	85.00	0	0	54.30	57.68	57.00	0	0	45.45	49.99	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.161										0.000	
+4	Nonane 	Target	0	57.00	6.538	6.485	6.700	1.660	7119966	4294446	0.00000	Auto	15	6.620	Linear	0	0	0	0	0	0	94.11	88.07	0.00	98	43.00	0	0	94.11	88.07	85.00	0	0	37.38	36.40	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.929										0.000	
+5	Decane	Target	0	57.00	8.318	8.265	8.445	1.680	9403366	5582333	0.00000	Auto	20	8.365	Linear	0	0	0	0	0	0	76.53	73.46	0.00	98	43.00	0	0	76.53	73.46	71.00	0	0	40.61	36.27	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.874										0.000	
+6	Undecane 	Target	0	57.00	9.985	9.940	10.025	1.670	10477075	6270383	0.00000	Auto	23	10.015	Linear	0	0	0	0	0	0	69.23	66.68	0.00	98	43.00	0	0	69.23	66.68	71.00	0	0	51.26	46.90	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.869										0.000	
+7	Dodecane 	Target	0	57.00	11.538	11.410	11.585	1.750	11044785	6294575	0.00000	Auto	26	11.555	Linear	0	0	0	0	0	0	65.29	62.96	0.00	98	43.00	0	0	65.29	62.96	71.00	0	0	59.10	54.51	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.831										0.000	
+8	Tridecane 	Target	0	57.00	12.985	12.880	13.015	1.790	11641515	6490196	0.00000	Auto	32	13.000	Linear	0	0	0	0	0	0	64.53	60.26	0.00	98	71.00	0	0	64.53	60.26	43.00	0	0	62.41	61.31	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.843										0.000	
+9	Tetradecane 	Target	0	57.00	14.346	14.255	14.615	2.390	15946579	6673176	0.00000	Auto	36	14.355	Linear	0	0	0	0	0	0	66.81	65.63	0.00	99	71.00	0	0	66.81	65.63	43.00	0	0	59.29	59.79	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.567										0.000	
+10	Pentadecane 	Target	0	57.00	15.628	15.545	15.670	2.160	14404826	6682509	0.00000	Auto	39	15.635	Linear	0	0	0	0	0	0	69.21	69.80	0.00	99	71.00	0	0	69.21	69.80	43.00	0	0	56.54	58.99	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.031										0.000	
+11	Hexadecane 	Target	0	57.00	16.839	16.775	16.910	2.240	15194679	6790280	0.00000	Auto	44	16.855	Linear	0	0	0	0	0	0	70.23	72.41	0.00	94	71.00	0	0	70.23	72.41	43.00	0	0	54.07	56.64	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.235										0.000	
+12	n-Hexane	Target	0	57.00	2.345	2.310	2.495	2.450	4482978	1829391	0.00000	Auto	52	2.340	Linear	0	0	0	0	0	0	94.31	118.06	0.00	88	56.00	0	0	94.31	118.06	41.00	0	0	93.38	74.08	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.450										0.000	
+13	Heptadecane 	Target	0	57.00	17.986	17.915	18.040	2.060	13459663	6538132	0.00000	Auto	55	17.935	Linear	0	0	0	0	0	0	74.25	72.89	0.00	97	71.00	0	0	74.25	72.89	43.00	0	0	63.70	53.47	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.777										0.000	
+14	Octadecane 	Target	0	57.00	19.124	19.030	19.145	4.620	2566960	555972	0.00000	Auto	58	19.025	Linear	0	0	0	0	0	0	75.24	57.53	0.00	94	71.00	0	0	75.24	57.53	43.00	0	0	62.49	46.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.633										0.000	
+15	Nonadecane 	Target	0	57.00	19.901	19.875	19.925	1.470	82788	56212	0.00000	Auto	65	19.895	Linear	0	0	0	0	0	0	76.67	52.51	0.00	63	71.00	0	0	76.67	52.51	43.00	0	0	61.39	90.60	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.935										0.000	
+16	Eicosane 	Target	0	57.00	20.495	20.470	20.515	1.720	56437	32753	0.00000	Auto	69	20.560	Linear	0	0	0	0	0	0	78.25	54.32	0.00	85	71.00	0	0	78.25	54.32	43.00	0	0	61.38	51.30	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.937										0.000	
+17	Heneicosane 	Target	0	57.00	Not Identified									21.595	Linear	0	0	0	0																																	0.00														0.000	
+18	Docosane 	Target	0	57.00	22.034	21.950	22.070	2.610	17824	6835	0.00000	Auto	79	22.095	Linear	0	0	0	0	0	0	77.34	83.18	0.00	77	71.00	0	0	77.34	83.18	43.00	0	0	60.78	47.94	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.953										0.000	
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																															0.000	
+20	Tetracosane 	Target	0	57.00	23.337	23.250	23.365	3.520	39831	11311	0.00000	Auto	90	23.240	Linear	0	0	0	0	0	0	78.87	49.32	0.00	84	71.00	0	0	78.87	49.32	43.00	0	0	59.95	60.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.655										0.000	
+21	Pentacosane 	Target	0	57.00	23.801	23.770	23.830	1.900	108753	57156	0.00000	Auto	95	23.935	Linear	0	0	0	0	0	0	78.36	64.43	0.00	94	71.00	0	0	78.36	64.43	43.00	0	0	59.80	45.02	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	0.978										0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\ADAMS DB5 method\Alkanes3uL0.01Adams_08112018.qgd
+Output Date	10/23/2023
+Output Time	2:09:38 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																															0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																															0.000	
+3	Octane 	Target	0	43.00	Not Identified									4.855	Linear	0	0	0	0																																	0.00														0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																																
+5	Decane	Target	0	57.00	Not Identified									8.365	Linear	0	0	0	0																																																
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																																
+7	Dodecane 	Target	0	57.00	Not Identified									11.555	Linear	0	0	0	0																																															0.000	
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																																
+9	Tetradecane 	Target	0	57.00	Not Identified									14.355	Linear	0	0	0	0																																																
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																															0.000	
+11	Hexadecane 	Target	0	57.00	Not Identified									16.855	Linear	0	0	0	0																																																
+12	n-Hexane	Target	0	57.00	2.190	2.165	2.235	1.820	59937	32971	0.00000	Auto	11	2.340	Linear	0	0	0	0	0	0	94.31	63.50	0.00	76	56.00	0	0	94.31	63.50	41.00	0	0	93.38	91.97	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.236										0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																																
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																																
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																															0.000	
+16	Eicosane 	Target	0	57.00	Not Identified									20.560	Linear	0	0	0	0																																																
+17	Heneicosane 	Target	0	57.00	Not Identified									21.595	Linear	0	0	0	0																																																
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																																
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																																
+20	Tetracosane 	Target	0	57.00	Not Identified									23.240	Linear	0	0	0	0																																																
+21	Pentacosane 	Target	0	57.00	Not Identified									23.935	Linear	0	0	0	0																																															0.000	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\ADAMS DB5 method\Alkanes3uL0.01Adams08122018.qgd
+Output Date	10/23/2023
+Output Time	2:09:38 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																																
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																																
+3	Octane 	Target	0	43.00	Not Identified									4.855	Linear	0	0	0	0																																																
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																																
+5	Decane	Target	0	57.00	Not Identified									8.365	Linear	0	0	0	0																																																
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																																
+7	Dodecane 	Target	0	57.00	Not Identified									11.555	Linear	0	0	0	0																																																
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																																
+9	Tetradecane 	Target	0	57.00	Not Identified									14.355	Linear	0	0	0	0																																																
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																																
+11	Hexadecane 	Target	0	57.00	Not Identified									16.855	Linear	0	0	0	0																																																
+12	n-Hexane	Target	0	57.00	Not Identified									2.340	Linear	0	0	0	0																																																
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																																
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																																
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																																
+16	Eicosane 	Target	0	57.00	Not Identified									20.560	Linear	0	0	0	0																																																
+17	Heneicosane 	Target	0	57.00	Not Identified									21.595	Linear	0	0	0	0																																																
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																																
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																																
+20	Tetracosane 	Target	0	57.00	Not Identified									23.240	Linear	0	0	0	0																																																
+21	Pentacosane 	Target	0	57.00	Not Identified									23.935	Linear	0	0	0	0																																																
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\Project1_190815\Campbell RMBL Data\Test instrument runs\alkanes\ADAMS DB5 method\Alkanes3uL0.01Adamsrep_08122018.qgd
+Output Date	10/23/2023
+Output Time	2:09:38 PM
+
+[MS Quantitative Results]
+# of IDs	21
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	Cyclopentane, methyl- 	Target	0	56.00	Not Identified									2.570	Linear	0	0	0	0																																															0.000	
+2	Heptane	Target	0	43.00	Not Identified									3.320	Linear	0	0	0	0																																															0.000	
+3	Octane 	Target	0	43.00	Not Identified									4.855	Linear	0	0	0	0																																	0.00														0.000	
+4	Nonane 	Target	0	57.00	Not Identified									6.620	Linear	0	0	0	0																																																
+5	Decane	Target	0	57.00	Not Identified									8.365	Linear	0	0	0	0																																																
+6	Undecane 	Target	0	57.00	Not Identified									10.015	Linear	0	0	0	0																																																
+7	Dodecane 	Target	0	57.00	Not Identified									11.555	Linear	0	0	0	0																																															0.000	
+8	Tridecane 	Target	0	57.00	Not Identified									13.000	Linear	0	0	0	0																																																
+9	Tetradecane 	Target	0	57.00	Not Identified									14.355	Linear	0	0	0	0																																																
+10	Pentadecane 	Target	0	57.00	Not Identified									15.635	Linear	0	0	0	0																																															0.000	
+11	Hexadecane 	Target	0	57.00	Not Identified									16.855	Linear	0	0	0	0																																																
+12	n-Hexane	Target	0	57.00	2.192	2.165	2.240	2.050	87387	42539	0.00000	Auto	9	2.340	Linear	0	0	0	0	0	0	94.31	61.39	0.00	76	56.00	0	0	94.31	61.39	41.00	0	0	93.38	89.15	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.00	ipos		0.00000	1.330										0.000	
+13	Heptadecane 	Target	0	57.00	Not Identified									17.935	Linear	0	0	0	0																																																
+14	Octadecane 	Target	0	57.00	Not Identified									19.025	Linear	0	0	0	0																																																
+15	Nonadecane 	Target	0	57.00	Not Identified									19.895	Linear	0	0	0	0																																															0.000	
+16	Eicosane 	Target	0	57.00	Not Identified									20.560	Linear	0	0	0	0																																																
+17	Heneicosane 	Target	0	57.00	Not Identified									21.595	Linear	0	0	0	0																																																
+18	Docosane 	Target	0	57.00	Not Identified									22.095	Linear	0	0	0	0																																																
+19	Tricosane 	Target	0	57.00	Not Identified									22.635	Linear	0	0	0	0																																																
+20	Tetracosane 	Target	0	57.00	Not Identified									23.240	Linear	0	0	0	0																																																
+21	Pentacosane 	Target	0	57.00	Not Identified									23.935	Linear	0	0	0	0																																															0.000	
+
