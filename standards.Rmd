@@ -27,7 +27,7 @@ ggplot2::theme_set(theme_minimal())
 # source("read_shimadzu.R")
 # #grab all the files in the data folder - add new Shimadzu output here and give it 2 digit prefix number
 # setwd("~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/Standards/data")
-# stds.data <- list.files() %>% set_names() %>% map(read.shimadzu) %>% bind_rows(.id="batch") %>% 
+# stds.data <- list.files() %>% set_names() %>% map(read.shimadzu) %>% bind_rows(.id="batch") %>%
 #   filter(!Filename %in% c("Blank_07192019.qgd"))
 # setwd("~/MyDocs/MEGA/UCI/RMBL 2020/RMBL-GCMS/")
 # save(stds.data, file = "data/standards_data.rda")
@@ -41,7 +41,8 @@ stds <- stds.data %>% filter(Name %in% names(mix)) %>%
   mutate(Name = factor(recode(Name, !!!mix), levels=mergedmix)) %>% 
   dcast(Filename~Name, sum, value.var="Area", drop=F) %>% 
   write_csv("output/standards/standards_qual.csv")
-#Import standards_qual.csv into https://docs.google.com/spreadsheets/d/1BqdNz8hb_CGbX83Rg8Zr42TPwb4z_JN42Qf_Je4Sz4k/edit#gid=2145192042
+#Import standards_qual.csv into the standards_qual tab of this Google Sheet: https://docs.google.com/spreadsheets/d/1BqdNz8hb_CGbX83Rg8Zr42TPwb4z_JN42Qf_Je4Sz4k/edit#gid=2145192042
+#Copy new Filenames to the metadata tab, drag down XLOOKUP in peak area columns
 #Add metadata: type	notes	rundate	batch	conc	replicate	year
 #Then download the metadata tab to /data and read it back in:
 stds.meta <- read_csv("data/shimadzu_standards - metadata.csv") %>% select(-all_of(mergedmix)) %>% 

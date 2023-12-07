@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2023-10-23" />
+<meta name="date" content="2023-12-07" />
 
 <title>RMBL GCMS Standards</title>
 
@@ -253,7 +253,7 @@ div.tocify {
 <h1 class="title toc-ignore">RMBL GCMS Standards</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2023-10-23</h4>
+<h4 class="date">2023-12-07</h4>
 
 </div>
 
@@ -268,7 +268,7 @@ ggplot2::theme_set(theme_minimal())</code></pre>
 <pre class="r"><code># source(&quot;read_shimadzu.R&quot;)
 # #grab all the files in the data folder - add new Shimadzu output here and give it 2 digit prefix number
 # setwd(&quot;~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/Standards/data&quot;)
-# stds.data &lt;- list.files() %&gt;% set_names() %&gt;% map(read.shimadzu) %&gt;% bind_rows(.id=&quot;batch&quot;) %&gt;% 
+# stds.data &lt;- list.files() %&gt;% set_names() %&gt;% map(read.shimadzu) %&gt;% bind_rows(.id=&quot;batch&quot;) %&gt;%
 #   filter(!Filename %in% c(&quot;Blank_07192019.qgd&quot;))
 # setwd(&quot;~/MyDocs/MEGA/UCI/RMBL 2020/RMBL-GCMS/&quot;)
 # save(stds.data, file = &quot;data/standards_data.rda&quot;)
@@ -282,7 +282,8 @@ stds &lt;- stds.data %&gt;% filter(Name %in% names(mix)) %&gt;%
   mutate(Name = factor(recode(Name, !!!mix), levels=mergedmix)) %&gt;% 
   dcast(Filename~Name, sum, value.var=&quot;Area&quot;, drop=F) %&gt;% 
   write_csv(&quot;output/standards/standards_qual.csv&quot;)
-#Import standards_qual.csv into https://docs.google.com/spreadsheets/d/1BqdNz8hb_CGbX83Rg8Zr42TPwb4z_JN42Qf_Je4Sz4k/edit#gid=2145192042
+#Import standards_qual.csv into the standards_qual tab of this Google Sheet: https://docs.google.com/spreadsheets/d/1BqdNz8hb_CGbX83Rg8Zr42TPwb4z_JN42Qf_Je4Sz4k/edit#gid=2145192042
+#Copy new Filenames to the metadata tab, drag down XLOOKUP in peak area columns
 #Add metadata: type notes   rundate batch   conc    replicate   year
 #Then download the metadata tab to /data and read it back in:
 stds.meta &lt;- read_csv(&quot;data/shimadzu_standards - metadata.csv&quot;) %&gt;% select(-all_of(mergedmix)) %&gt;% 
@@ -438,6 +439,16 @@ meta.mix.long &lt;- meta.mix %&gt;%
 <td align="right"></td>
 <td align="right"></td>
 <td align="right">3</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2023b_fil2</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">2</td>
 <td align="right"></td>
 </tr>
 </tbody>
@@ -762,6 +773,12 @@ blanks)</caption>
 <td align="left">2023a_fil1</td>
 <td align="left">2023mix620</td>
 <td align="left">2023-06-20</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">2023b_fil2</td>
+<td align="left">2023mix620fil2</td>
+<td align="left">2023-08-15</td>
 <td align="right">9</td>
 </tr>
 </tbody>
