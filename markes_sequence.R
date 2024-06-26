@@ -7,10 +7,9 @@ library(tidyverse)
 #Markes sequence aligner
 #Author: John Powers
 #Purpose: match up the Markes sequence and the list of Shimadzu chromatogram files to infer skips
-#fuzzy joins based on the desorb file of the Markes traps and the creation time of the qgd files
+#fuzzy joins based on the desorb time of the Markes traps and the creation time of the qgd files
 
 filedate <- "230908" #update to YYMMDD date the file was copied off
-thisyear <- 2023
 
 # Markes sequence ---------------------------------------------------------
 
@@ -62,8 +61,6 @@ sequ <- read_xml(paste0("data/Sequence", filedate, ".prj.xml")) %>%
 
 sequ$Desorb.Start.Time[3239:3240] <- sequ$Desorb.Start.Time[3238] + c(0.5,1)*60*60 #patch a couple NAs
 
-sequ.yr <- sequ %>% filter(year(sequence.start)==thisyear)
-
 # Chromatogram data files -------------------------------------------------------------------
 
 #run the following script on GC-MS computer to get a list of the files
@@ -87,25 +84,30 @@ qgdfiles <-  read_csv(paste0("data/dir",filedate,".csv")) %>%
          dir.index = row_number()) %>% 
   filter(ext=="qgd") #only want Shimadzu chromatograms
 
-qgdfiles.yr <- qgdfiles %>% filter(year(CreationTime)==thisyear) %>% 
-  filter(!str_detect(FullName, "VMartin RMBL Data 2023")) #Val copied these files
-#check for duplicates
-#qgdfiles.yr %>% filter(FileName %in% FileName[duplicated(FileName)]) %>% View()
-#two blanks in 2023 with same name
-
 users <- read_tsv("data/GCMS_users.tsv")
 
 # Merge sequence and files ------------------------------------------------
 
 # fuzzy join the two lists by Markes desorb start time and GC-MS file creation time with a certain offset and tolerance
-#time difference shift each year, these are the optimum settings:
-#up to 2021: +0 min +- 16 min
-#2022: +18 min +- 15 min
-#TODO put these parameters in a text file and run for the other years
+#time difference shift each year
+# cd_offset: files created at least this many minutes after desorb start time 
+# cd_tolerance: fuzziness before or after (min)
 
-#range for 2023: -7 min to 21 min 
-cd_offset <- 7 # files created at least this many minutes after desorb start time 
-cd_tolerance <- 14 # fuzziness before or after (min)
+fuzzy_params <- read_csv("data/fuzzy_params.csv")
+
+for(i in 1:nrow(fuzzy_params)) {
+
+thisyear <- fuzzy_params$year[i]
+cd_offset <- fuzzy_params$cd_offset[i]
+cd_tolerance <- fuzzy_params$cd_tolerance[i]
+
+sequ.yr <- sequ %>% filter(year(sequence.start)==thisyear)
+qgdfiles.yr <- qgdfiles %>% filter(year(CreationTime)==thisyear) %>% 
+  filter(!str_detect(FullName, "VMartin RMBL Data 2023")) #Val copied these files
+
+#check for duplicates
+#qgdfiles.yr %>% filter(FileName %in% FileName[duplicated(FileName)]) %>% View()
+#two blanks in 2023 with same name
 
 #first add files that match desorb times
 sequ.merged <- difference_left_join(sequ.yr, qgdfiles.yr %>% mutate(CreationTime = CreationTime - minutes(cd_offset)),
@@ -129,11 +131,15 @@ sequ.file <- bind_rows(sequ.merged, qgdfiles.nomatch) %>%
   left_join(users)
 
 sequ.summary <- sequ.file %>% 
+  mutate(verdict="", sample="") %>% 
   select(c(sequence.start, Desorb.Start.Time, CreationTime, eithertime, status, Tube, markes_n,
-           GC_n, either_n, markes_GC, create_desorb,  FileName, user, FullName, id, fuzzy_n)) %>% #columns needed for annotating verdicts
+           GC_n, either_n, markes_GC, create_desorb,  
+           verdict, FileName, sample, user, FullName, id, fuzzy_n)) %>% #columns needed for annotating verdicts
   arrange(sequence.start, markes_n, eithertime) %>%
   mutate(desorb.Start.diff = c(NA, diff(Desorb.Start.Time))) %>% #time differences between desorptions
-  write_csv(paste0("output/sequsummary",filedate,"_",thisyear,".csv"))
+  write_csv(paste0("output/gc",thisyear,".csv"))
 
 save(sequ.yr, qgdfiles.yr, sequ.file, cd_offset, cd_tolerance,  
      file=paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
+
+}
