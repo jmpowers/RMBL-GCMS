@@ -11,11 +11,11 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2023-10-03" />
+<meta name="date" content="2026-07-14" />
 
 <title>RMBL GCMS Data Inventory</title>
 
-<script src="libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -31,7 +31,7 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
 <link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="libs/navigation-1.1/tabsets.js"></script>
@@ -253,7 +253,7 @@ div.tocify {
 <h1 class="title toc-ignore">RMBL GCMS Data Inventory</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2023-10-03</h4>
+<h4 class="date">2026-07-14</h4>
 
 </div>
 
@@ -267,10 +267,10 @@ library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 #source(&quot;markes_sequence.R&quot;) #generates the following rda file
-filedate &lt;- &quot;230908&quot; #update to YYMMDD date the file was copied off
-thisyear &lt;- 2023
+filedate &lt;- &quot;260712&quot; #update to YYMMDD date the file was copied off
+thisyear &lt;- 2025
 load(paste0(&quot;output/markes_sequence&quot;,filedate,&quot;_&quot;,thisyear,&quot;.rda&quot;))</code></pre>
-<p>Generated for 2023 as of 2023-09-08</p>
+<p>Generated for 2025 as of 2026-07-12</p>
 <div id="fuzzy-join-diagnostics" class="section level1">
 <h1>Fuzzy join diagnostics</h1>
 <pre class="r"><code>sequ.file %&gt;% count(fuzzy_n, year(eithertime)) %&gt;% 
@@ -288,31 +288,36 @@ are skips</caption>
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="right">2023</td>
-<td align="right">2143</td>
+<td align="right">2024</td>
+<td align="right">1</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
-<td align="right">NA</td>
-<td align="right">92</td>
+<td align="right">2025</td>
+<td align="right">1435</td>
 </tr>
 <tr class="odd">
-<td align="right">2</td>
-<td align="right">2023</td>
-<td align="right">12</td>
+<td align="right">1</td>
+<td align="right">NA</td>
+<td align="right">64</td>
 </tr>
 <tr class="even">
+<td align="right">2</td>
+<td align="right">2025</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
 <td align="right">NA</td>
-<td align="right">2023</td>
-<td align="right">32</td>
+<td align="right">2025</td>
+<td align="right">25</td>
 </tr>
 </tbody>
 </table>
 <pre class="r"><code>#sequ.file %&gt;% filter(fuzzy_n &gt; 1, fuzzy_n &lt; 100) %&gt;% View()
 nrow(sequ.yr); nrow(qgdfiles.yr); nrow(sequ.file) #TODO some duplicates created in the merge</code></pre>
-<pre><code>[1] 2241</code></pre>
-<pre><code>[1] 1552</code></pre>
-<pre><code>[1] 2279</code></pre>
+<pre><code>[1] 1501</code></pre>
+<pre><code>[1] 1433</code></pre>
+<pre><code>[1] 1527</code></pre>
 <pre class="r"><code>plot(y~ x,   data=data.frame(x = tail(sort(qgdfiles.yr$CreationTime - minutes(cd_offset)), 80), y = 1))
 points(y~ x, data=data.frame(x = tail(sort(sequ.yr$Desorb.Start.Time), 80), y = 1.02), col=&quot;blue&quot;)</code></pre>
 <p><img src="images/fuzzyjoin-1.svg" width="768" /></p>
@@ -321,7 +326,7 @@ points(y~ x, data=data.frame(x = tail(sort(sequ.yr$Desorb.Start.Time), 80), y = 
        year = year(alltimes)) %&gt;% 
   arrange(alltimes) %&gt;% 
   mutate(timediff = c(0,as.numeric(diff(alltimes), units=&quot;mins&quot;)), n=row_number())  %&gt;% 
-  filter(year==2023) %&gt;% 
+  filter(year==thisyear) %&gt;% 
   ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=0.2) +
   geom_hline(yintercept=c(0, cd_offset), color=&quot;blue&quot;) +
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color=&quot;red&quot;) +
@@ -390,6 +395,14 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
   kable(caption = &quot;Hand-annotated TD-GC-MS logs in output/annotated/&quot;)</code></pre>
 <table>
 <caption>Hand-annotated TD-GC-MS logs in output/annotated/</caption>
+<colgroup>
+<col width="45%" />
+<col width="14%" />
+<col width="14%" />
+<col width="6%" />
+<col width="6%" />
+<col width="10%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">filename</th>
@@ -402,7 +415,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">gc2023</td>
+<td align="left">RMBL GCMS Data Inventory - gc2023</td>
 <td align="left">2023-06-20</td>
 <td align="left">2023-09-07</td>
 <td align="right">26</td>
@@ -410,7 +423,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">157</td>
 </tr>
 <tr class="even">
-<td align="left">2022gc220929</td>
+<td align="left">RMBL GCMS Data Inventory - gc2022</td>
 <td align="left">2022-06-23</td>
 <td align="left">2022-09-28</td>
 <td align="right">26</td>
@@ -418,7 +431,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">142</td>
 </tr>
 <tr class="odd">
-<td align="left">maxfield_all210827annot</td>
+<td align="left">RMBL GCMS Data Inventory - gc2021</td>
 <td align="left">2018-07-16</td>
 <td align="left">2021-08-26</td>
 <td align="right">25</td>
@@ -426,20 +439,28 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">73</td>
 </tr>
 <tr class="even">
-<td align="left">ipogc181921</td>
-<td align="left">2018-08-29</td>
-<td align="left">2021-08-21</td>
-<td align="right">26</td>
-<td align="right">1410</td>
-<td align="right">60</td>
+<td align="left">RMBL GCMS Data Inventory - gc2019</td>
+<td align="left">2019-06-19</td>
+<td align="left">2019-09-03</td>
+<td align="right">20</td>
+<td align="right">1924</td>
+<td align="right">147</td>
 </tr>
 <tr class="odd">
-<td align="left">maxfield_all190807_0815</td>
-<td align="left">2018-07-16</td>
-<td align="left">2019-08-13</td>
-<td align="right">23</td>
-<td align="right">459</td>
-<td align="right">26</td>
+<td align="left">RMBL GCMS Data Inventory - gc2018</td>
+<td align="left">2018-06-14</td>
+<td align="left">2018-09-06</td>
+<td align="right">20</td>
+<td align="right">1092</td>
+<td align="right">121</td>
+</tr>
+<tr class="even">
+<td align="left">RMBL GCMS Data Inventory - gc2017</td>
+<td align="left">2017-06-20</td>
+<td align="left">2017-09-05</td>
+<td align="right">20</td>
+<td align="right">713</td>
+<td align="right">89</td>
 </tr>
 </tbody>
 </table>

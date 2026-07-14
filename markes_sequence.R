@@ -9,7 +9,7 @@ library(tidyverse)
 #Purpose: match up the Markes sequence and the list of Shimadzu chromatogram files to infer skips
 #fuzzy joins based on the desorb time of the Markes traps and the creation time of the qgd files
 
-filedate <- "230908" #update to YYMMDD date the file was copied off
+filedate <- "260712" #update to YYMMDD date the file was copied off
 
 # Markes sequence ---------------------------------------------------------
 

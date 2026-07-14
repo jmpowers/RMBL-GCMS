@@ -23,8 +23,8 @@ library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 #source("markes_sequence.R") #generates the following rda file
-filedate <- "230908" #update to YYMMDD date the file was copied off
-thisyear <- 2023
+filedate <- "260712" #update to YYMMDD date the file was copied off
+thisyear <- 2025
 load(paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
 ```
 
@@ -46,7 +46,7 @@ tibble(alltimes = c(qgdfiles.yr$CreationTime, sequ.yr$Desorb.Start.Time),
        year = year(alltimes)) %>% 
   arrange(alltimes) %>% 
   mutate(timediff = c(0,as.numeric(diff(alltimes), units="mins")), n=row_number())  %>% 
-  filter(year==2023) %>% 
+  filter(year==thisyear) %>% 
   ggplot(aes(x=n, y=timediff, color=type)) + geom_point(size=0.2) +
   geom_hline(yintercept=c(0, cd_offset), color="blue") +
   geom_hline(yintercept=c(cd_offset-cd_tolerance, cd_offset+cd_tolerance), color="red") +
