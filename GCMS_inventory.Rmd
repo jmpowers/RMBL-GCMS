@@ -23,7 +23,7 @@ library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 #source("markes_sequence.R") #generates the following rda file
-filedate <- "260712" #update to YYMMDD date the file was copied off
+filedate <- "260908" #update to YYMMDD date the file was copied off
 thisyear <- 2025
 load(paste0("output/markes_sequence",filedate,"_",thisyear,".rda"))
 ```

@@ -5,8 +5,8 @@ library(reshape2)
 library(vegan)
 source("read_shimadzu.R")
 
-filedate <- "230908"
-thisyear <- 2023 
+filedate <- "260908"
+thisyear <- 2025 
 
 # Read Shimadzu output ----------------------------------------------------
 #adapted from maxfield_gc.R
