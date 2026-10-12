@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2026-07-14" />
+<meta name="date" content="2026-10-09" />
 
 <title>RMBL GCMS Data Inventory</title>
 
@@ -253,7 +253,7 @@ div.tocify {
 <h1 class="title toc-ignore">RMBL GCMS Data Inventory</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2026-07-14</h4>
+<h4 class="date">2026-10-09</h4>
 
 </div>
 
@@ -267,10 +267,10 @@ library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 #source(&quot;markes_sequence.R&quot;) #generates the following rda file
-filedate &lt;- &quot;260712&quot; #update to YYMMDD date the file was copied off
+filedate &lt;- &quot;260908&quot; #update to YYMMDD date the file was copied off
 thisyear &lt;- 2025
 load(paste0(&quot;output/markes_sequence&quot;,filedate,&quot;_&quot;,thisyear,&quot;.rda&quot;))</code></pre>
-<p>Generated for 2025 as of 2026-07-12</p>
+<p>Generated for 2025 as of 2026-09-08</p>
 <div id="fuzzy-join-diagnostics" class="section level1">
 <h1>Fuzzy join diagnostics</h1>
 <pre class="r"><code>sequ.file %&gt;% count(fuzzy_n, year(eithertime)) %&gt;% 
@@ -415,6 +415,14 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">RMBL GCMS Data Inventory - gc2025</td>
+<td align="left">2025-06-13</td>
+<td align="left">2025-09-19</td>
+<td align="right">20</td>
+<td align="right">1527</td>
+<td align="right">107</td>
+</tr>
+<tr class="even">
 <td align="left">RMBL GCMS Data Inventory - gc2023</td>
 <td align="left">2023-06-20</td>
 <td align="left">2023-09-07</td>
@@ -422,7 +430,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">2281</td>
 <td align="right">157</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">RMBL GCMS Data Inventory - gc2022</td>
 <td align="left">2022-06-23</td>
 <td align="left">2022-09-28</td>
@@ -430,7 +438,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">1903</td>
 <td align="right">142</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">RMBL GCMS Data Inventory - gc2021</td>
 <td align="left">2018-07-16</td>
 <td align="left">2021-08-26</td>
@@ -438,7 +446,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">1568</td>
 <td align="right">73</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">RMBL GCMS Data Inventory - gc2019</td>
 <td align="left">2019-06-19</td>
 <td align="left">2019-09-03</td>
@@ -446,7 +454,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">1924</td>
 <td align="right">147</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">RMBL GCMS Data Inventory - gc2018</td>
 <td align="left">2018-06-14</td>
 <td align="left">2018-09-06</td>
@@ -454,7 +462,7 @@ sequ.file %&gt;% drop_na(create_desorb) %&gt;%
 <td align="right">1092</td>
 <td align="right">121</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">RMBL GCMS Data Inventory - gc2017</td>
 <td align="left">2017-06-20</td>
 <td align="left">2017-09-05</td>
